@@ -67,7 +67,7 @@
 
 body {background: #fafafa}
 
-.row {width: 960px}
+.row {width: 1100px; }
 
 hr {
     -moz-border-bottom-colors: none;
@@ -85,12 +85,11 @@ hr {
 
 .page_wrap {margin: 0 auto 25px}
 
-header {min-height: 600px; background: url('img/s1.jpg') no-repeat left top; background-size:cover;}
-.slideshow{background: url('img/s1.jpg') no-repeat; clear:both; padding: 20px 0 40px;}
+header {/*min-height: 600px;*/ background: url('img/s1.jpg') no-repeat left top; background-size:cover; padding: 20px 0 40px;}
 
-.header_nav {background: #fafafa; padding: 15px 0 0; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999}
+
+.header_nav {background: #fafafa; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999; }
 .header_nav_fullwidth {background: #fafafa; padding: 10px 0 2px; margin-bottom: 25px; box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4)}
-
 
 .blog_post {clear: both; padding: 15px 0; overflow:auto; margin-bottom: 20px; background:#FFF; box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4)}
 .blog_post h3 {margin-top:0}
@@ -114,8 +113,8 @@ h1,h2,h3,h4 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; 
 .section_dark {background: #262626; border-top: 0; border-bottom: 1px dotted #999; padding: 20px 0 40px}
 .section_dark h2 {color: #999999; margin: 0 0 20px 0; font-size: 22px; text-align: center}
 
-.section_main {padding: 20px 0}
-.section_main h2 {padding: 0 0 20px}
+.section_main {padding: 50px 0; margin-bottom: 50px}
+.section_main h1 {font-size:6em; padding: 0 0 50px}
 
 /* END Frontpage sections */
 
@@ -154,8 +153,8 @@ dl.tabs dd.active {
 
 dl.tabs dd.active a {background: #fff}
 
-.nav-bar {margin-top: 0; background: none}
-.nav-bar > li {border: 0; padding: 0; font-family: 'Open Sans Condensed',sans-serif; letter-spacing: 1px; box-shadow: none}
+.nav-bar {margin-top: 0; background: none; }
+.nav-bar > li {margin: 25px 0 25px; border: 0; padding: 0; font-family: 'Open Sans Condensed',sans-serif; letter-spacing: 1px; box-shadow: none}
 .nav-bar > li > a:first-child {font-size: 16px; text-transform: uppercase; padding: 0 25px}
 .nav-bar > li:last-child {border: 0; box-shadow: none}
 .nav-bar > li.active:hover { background: #000; cursor: default; }{}
@@ -206,8 +205,11 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 
 .gallery-nav-bar li a:hover {background: #C02702; color: #FFF; padding: 3px 12px; border-radius: 3px}
 
-
-.footer {text-align:center; padding: 50px 0}
+footer {font-size: .8em; padding: 30px 0px 50px; color: #b2b5b9; background-color: #262626;}
+footer h3 {color: #888d92}
+#submit-button{width:165px; margin-right:5px; margin-left:5px}
+/*.foo {margin: 0 15px 0}*/
+/*.foo:first-child {margin-top:10px; margin-right:40px; }*/
 
 /*-------------------------------------------------------------------------------------------------*/
 /* Masonry

@@ -20,6 +20,14 @@
 
   <script src="javascripts/modernizr.foundation.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.equalizer.js"></script>
+
+  <script>
+     $(document).foundation();
+  </script>
   
   <link rel="stylesheet" href="ligature.css">
   
@@ -77,12 +85,25 @@
         
         <header>
 
-              <div class="slideshow">
-                
-              </div>
+              <script>
+                  //set header height to window size
+                  $(document).ready(function(){
+                      resizeDiv();
+                  });
+
+                  window.onresize = function(event) {
+                      resizeDiv();
+                  }
+
+                  function resizeDiv() {
+                      vph = $(window).height();
+                      $('header').css({'height': vph + 'px'});
+                  }
+              </script>
 
               <script>
-                  var images = new Array('img/s1.jpg','img/s2.jpg','img/s3.jpg', 'img/s4.jpg');
+                  //slideshow
+                  var images = new Array('img/s1.jpg','img/s2.jpg','img/s3.jpg', 'img/s4.jpg', 'img/s5.jpg');
                   var nextimage=0;
 
                   doSlideshow();
@@ -92,15 +113,47 @@
                     if(nextimage>=images.length) nextimage=0;
                     $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
                   }
+
               </script>
 
-              <h1 class="heading_supersize">Asian American Association</h1>
-              <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2>
+              <div style="position:absolute; left:37%; top:13%" >
+                  <img src="img/growing_young.png" width="400" height="400">
+              </div>
+
+<!--               <h1 class="heading_supersize">Asian American Association</h1>
+              <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2> -->
 
         </header>
-        
+
 <!-- ######################## Section ######################## -->
-     
+
+<section class="section_main">
+
+      <h1 style="text-align:center">Upcoming Events</h1>
+      
+      <div class="row" data-equalizer>
+      
+          <article class="six columns">
+                <div class="panel" data-equalizer-watch>
+                    <h3>T Shirt Design Contest</h3>
+                    <a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/event01.jpg"/></a>
+                </div>
+          </article>
+          
+          <article class="six columns">
+                <div class="panel" data-equalizer-watch>
+                    <h3>Fashion Show</h3>
+                    <a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/fashion_show.jpg"/></a>
+                </div>
+          </article>
+  
+      </div>
+      
+</section>        
+      
+
+<!-- ######################## Section ######################## -->
+<!--      
    <section class="section_light">
    
         <div class="row">
@@ -124,11 +177,11 @@
         
         </div>
         
-    </section>
+    </section> -->
 
 <!-- ######################## Section ######################## -->
 
-   <section  class="section_dark">
+<!--    <section  class="section_dark">
    
       <div class="row"> 
       
@@ -161,60 +214,88 @@
       
       </div>
       
-    </section>
+    </section> -->
       
-<!-- ######################## Section ######################## -->
 
-<section class="section_main">
-
-      <h2 style="text-align:center">Discover Hidden Treasures</h2>
-      
-      <div class="row">
-      
-          <article class="six columns">
-                <div class="panel">
-                    <h3>Lorem Ipsum</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus fermentum metus, id commodo sapien. Donec cursus fermentum metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus fermentum metus, id commodo sapien. Donec cursus fermentum metus.</p>
-                  <a href="#" class="button secondary small radius">Learn More &raquo;</a>
-                </div>
-          </article>
-          
-              
-          <article class="six columns">
-                <div class="panel">
-                    <h3>Lorem Ipsum</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus fermentum metus, id commodo sapien. Donec cursus fermentum metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus fermentum metus, id commodo sapien. Donec cursus fermentum metus.</p>
-                  <a href="#" class="button secondary small radius">Learn More &raquo;</a>
-                </div>
-          </article>
-  
-      </div>
-      
-      
-</section>
 
 <!-- ######################## Footer ######################## -->  
       
-<footer>
+    <footer>
 
-      <div class="row">
-      
-          <div class="twelve columns footer">
-              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px; margin-right:15px" title="twitter">Twitter</a> 
-              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="facebook">Facebook</a>
-              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="pinterest">Pinterest</a>
-              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px" title="instagram">Instagram</a>
+    <div class="row">
+
+<!--     <div class="two column foo" >
+        <img src="img/growing_young.png" height="200" width="200" >
+    </div> -->
+    <!-- First Column -->
+
+    <div class="three column foo">
+        <h3>Contact Us</h3>
+            <ul class="footer_links">
+                <li><a href="#">Email: aaauiuc@gmail.com</a></li>
+                <li><a href="#">Illini Union 280<br>Office 256</a></li>
+                <li><a href="#">Find Us!</a></li>
+            </ul>
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="three column foo">
+        <h3>Join Our Email List!</h3>
+
+        <form>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>
+                <input type="text" placeholder="Enter Email Here"/>
+              </label>
+            </div>
+            <a href="#" class="button" id="submit-button">Submit</a>
           </div>
-          
-      </div>
+        </form>
 
-</footer>		  
+    </div>
+    
+    <!-- Third Column -->
+
+    <div class="four column foo">
+        <h3>Socialize</h3>
+             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/circle_icons/48x48/fb.png" width="50" height="50" /></a>
+             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/circle_icons/48x48/twitter.png" width="50" height="50" /></a>
+             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/circle_icons/48x48/tumblr.png" width="50" height="50" /></a>
+             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/circle_icons/48x48/youtube.png" width="50" height="50" /></a>
+             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/circle_icons/48x48/instagram.png" width="50" height="50" /></a>
+    </div>    
+        
+    <!-- Fourth Column -->
+    
+    <div class="two column foo">
+        <h3>Navigation</h3>
+            <ul class="footer_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">The Board</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Fashion Show</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Affiliates</a></li>
+            </ul>   
+    </div>
+
+    <div style="clear:both"></div>
+
+    </div>
+    
+    </footer> <!-- END footer -->		  
 
 <!-- ######################## Scripts ######################## --> 
 
     <!-- Included JS Files (Compressed) -->
     <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
     <!-- Initialize JS Plugins -->
-     <script src="javascripts/app.js" type="text/javascript"></script>
+    <script src="javascripts/app.js" type="text/javascript"></script>
+
+
+
 </body>
 </html>
