@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+  <meta charset="utf-8" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>AAA UIUC</title>
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.equalizer.js"></script>
+
+  <script type="javascript">
+     $(document).foundation();
+  </script>
+  
+  <link rel="stylesheet" href="ligature.css">
+  
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="skrollr.js"></script>
+  <script type="text/javascript">
+      skrollr.init();
+  </script>
+
+</head>
+
+<body>
+
+<!-- ######################## Main Menu ######################## -->
+ 
+<nav>
+
+     <div style="position:fixed" class="twelve columns header_nav">
+     <div class="row">
+
+            <ul id="menu-header" class="nav-bar horizontal">
+                 <li class="active"><a href="index.html">Home</a></li>
+                 <li class=""><a href="galleries.html">About</a></li>
+                 <li class=""><a href="portfolio.html">The Board</a></li>
+                 <li class=""><a href="pinterest-style.html">Events</a></li>
+                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
+                 <li class=""><a href="contact.html">Contact Us</a></li>
+                 <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
+
+                 <span style="float:right">
+                 <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/fb.png" width="50" height="50" /></a>
+                 <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/tw.png" width="50" height="50" /></a>
+                 <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/tr.png" width="50" height="50" /></a>
+                 <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/yt.png" width="50" height="50" /></a>
+                 <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/in.png" width="50" height="50" /></a>
+                 <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/zz.png" width="50" height="50" /></a>
+                 </span>
+            </ul>
+        
+        <script type="text/javascript">
+         //<![CDATA[
+         $('ul#menu-header').nav-bar();
+          //]]>
+        </script>
+        
+      </div>  
+      </div>
+      
+</nav>
+      
+      
+<!-- ######################## Header ######################## -->
+        
+<header data-0="background-position:0px 0px;" data-1000="background-position:0px -500px;">
+
+      <script>
+          //set header height to window size, positions logo in center of viewport
+          $(document).ready(function(){
+              resizeDiv();
+          });
+
+          window.onresize = function(event) {
+              resizeDiv();
+          }
+
+          function resizeDiv() {
+              vph = $(window).height();
+              vpw = $(window).width();
+              $('header').css({'height': vph + 'px'});
+              $('#logo').css({'top': vph/2 - $('#logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
+              $('#logo').css({'left': vpw/2 - $('#logo img').width()/2 + 'px'});
+          }
+      </script>
+
+      <script>
+          //slideshow: add images in array
+          var images = new Array('img/fs/fs1.jpg','img/fs/cultural4.jpg','img/fs/fs5.jpg', 'img/fs/formal1.jpg', 'img/fs/fs3.jpg', 'img/fs/cultural1.jpg');
+          var nextimage=0;
+
+          doSlideshow();
+
+          function doSlideshow()
+          {
+            if(nextimage>=images.length) nextimage=0;
+            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
+          }
+
+      </script>
+
+      <div id="logo" style="position:absolute; opacity:.4">
+          <img src="img/growing_young.png" width="400" height="400">
+      </div>
+
+<!--               <h1 class="heading_supersize">Asian American Association</h1>
+      <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2> -->
+
+</header>
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_main">
+
+      <h1 style="text-align:center">Fashion Show</h1>
+
+      <h2 style="text-align:center; padding: 0 150px 50px"> Maurizzle sheezy fizzle mofo turpis. Go to hizzle izzle cool. Yippiyo pizzle rhoncizzle dawg. In hac habitasse da bomb dictumst. Dizzle dapibus. Daahng dawg tellus urna, pretizzle fo shizzle my nizzle, mattizzle izzle, fo shizzle my nizzle vitae, nunc. Sizzle suscipit. Integizzle semper velit sizzle purus. </h2>
+      
+      <div class="row">
+
+      <h3 style="text-align:center; padding: 0 0 30px">Head Coordinators:</h3>
+      
+         <div class="six columns panel">
+            <h3>Head Coord 1</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+         
+         <div class="six columns panel">
+            <h3>Head Coord 2</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+      
+      </div>
+      
+</section>
+
+<!-- ######################## Section ######################## -->
+     
+   <!-- <section class="section_light">
+   
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3><span class="dropcap_red lsf-icon-dropcap" title="camera"></span> Photo Community</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, lacus id interdum ultrices, elit metus semper tellus, vel lacinia libero purus vitae risus.</p>
+         </div>
+         
+      
+          <div class="four columns panel">
+            <h3><span class="dropcap_black lsf-icon-dropcap" title="cloud"></span> Upload Photos</h3>
+            <p> Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus.</p>
+          </div>
+          
+          
+          <div class="four columns panel">
+            <h3><span class="dropcap_black lsf-icon-dropcap" title="video"></span> Video Tutorials</h3>
+            <p>Sed vitae nisi leo. Nulla tincidunt, turpis non gravida pharetra, diam sapien posuere massa, non luctus leo mauris at sapien. Donec ut fermentum eros.</p>
+          </div>
+        
+        </div>
+
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3><span class="dropcap_red lsf-icon-dropcap" title="camera"></span> Photo Community</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, lacus id interdum ultrices, elit metus semper tellus, vel lacinia libero purus vitae risus.</p>
+         </div>
+         
+      
+          <div class="four columns panel">
+            <h3><span class="dropcap_black lsf-icon-dropcap" title="cloud"></span> Upload Photos</h3>
+            <p> Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus.</p>
+          </div>
+          
+          
+          <div class="four columns panel">
+            <h3><span class="dropcap_black lsf-icon-dropcap" title="video"></span> Video Tutorials</h3>
+            <p>Sed vitae nisi leo. Nulla tincidunt, turpis non gravida pharetra, diam sapien posuere massa, non luctus leo mauris at sapien. Donec ut fermentum eros.</p>
+          </div>
+        
+        </div>
+        
+    </section> --> 
+
+<!-- ######################## Section ######################## -->
+
+<section>
+    <div id="culturalpic"></div> 
+</section>     
+
+    <script type="text/javascript">
+        $("#culturalpic").css({"background":"url('img/fs/cultural2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+    </script>   
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_main">
+
+      <h1 style="text-align:center">Cultural Scene</h1>
+
+      <h2 style="text-align:center; padding: 0 150px 50px"> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+
+      <h3 style="text-align:center; padding: 0 0 30px">Scene Coordinators:</h3>
+      
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3>Coord 1</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+         
+      
+         <div class="four columns panel">
+            <h3>Coord 2</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+          
+          
+         <div class="four columns panel">
+            <h3>Coord 3</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+        
+        </div>
+      
+</section>  
+
+<!-- ######################## Section ######################## -->
+
+<section>
+    <div id="nightlifepic"></div> 
+</section>     
+
+    <script type="text/javascript">
+        $("#nightlifepic").css({"background":"url('img/fs/nightlife2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+    </script>   
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_main">
+
+      <h1 style="text-align:center">Nightlife Scene</h1>
+
+      <h2 style="text-align:center; padding: 0 150px 50px"> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+
+      <h3 style="text-align:center; padding: 0 0 30px">Scene Coordinators:</h3>
+      
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3>Coord 1</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+         
+      
+         <div class="four columns panel">
+            <h3>Coord 2</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+          
+          
+         <div class="four columns panel">
+            <h3>Coord 3</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+        
+        </div>
+      
+</section>
+
+<!-- ######################## Section ######################## -->
+
+<section>
+    <div id="bizcazpic"></div> 
+</section>     
+
+    <script type="text/javascript">
+        $("#bizcazpic").css({"background":"url('img/fs/bizcaz1.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+    </script>   
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_main">
+
+      <h1 style="text-align:center">BizCaz Scene</h1>
+
+      <h2 style="text-align:center; padding: 0 150px 50px"> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+
+      <h3 style="text-align:center; padding: 0 0 30px">Scene Coordinators:</h3>
+      
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3>Coord 1</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+         
+      
+         <div class="four columns panel">
+            <h3>Coord 2</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+          
+          
+         <div class="four columns panel">
+            <h3>Coord 3</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+        
+        </div>
+      
+</section>
+
+<!-- ######################## Section ######################## -->
+
+<section>
+    <div id="formalpic"></div> 
+</section>     
+
+    <script type="text/javascript">
+        $("#formalpic").css({"background":"url('img/fs/formal3.jpg') fixed no-repeat", "background-size":"cover", "height":"450px"});
+    </script>   
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_main">
+
+      <h1 style="text-align:center">Formal Scene</h1>
+
+      <h2 style="text-align:center; padding: 0 150px 50px"> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+
+      <h3 style="text-align:center; padding: 0 0 30px">Scene Coordinators:</h3>
+      
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3>Coord 1</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+         
+      
+         <div class="four columns panel">
+            <h3>Coord 2</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+          
+          
+         <div class="four columns panel">
+            <h3>Coord 3</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+        
+        </div>
+      
+</section>
+
+<!-- ######################## Section ######################## -->
+
+<section>
+    <div id="modernpic"></div> 
+</section>     
+
+    <script type="text/javascript">
+        $("#modernpic").css({"background":"url('img/fs/fs2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+    </script>   
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_main">
+
+      <h1 style="text-align:center">Modern Scene</h1>
+
+      <h2 style="text-align:center; padding: 0 150px 50px"> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+
+      <h3 style="text-align:center; padding: 0 0 30px">Scene Coordinators:</h3>
+      
+        <div class="row">
+        
+         <div class="four columns panel">
+            <h3>Coord 1</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+         
+      
+         <div class="four columns panel">
+            <h3>Coord 2</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+          
+          
+         <div class="four columns panel">
+            <h3>Coord 3</h3>
+            <img src="img/varun.jpg" width="300" height="300">
+         </div>
+        
+        </div>
+      
+</section>
+
+<!-- ######################## Footer ######################## -->  
+      
+    <footer>
+
+    <div class="row">
+
+<!--     <div class="two column foo" >
+        <img src="img/growing_young.png" height="200" width="200" >
+    </div> -->
+    <!-- First Column -->
+
+    <div class="three column foo">
+        <h3>Contact Us</h3>
+            <ul class="footer_links">
+                <li><a href="#">Email: aaauiuc@gmail.com</a></li>
+                <li><a href="#">Illini Union 280<br>Office 256</a></li>
+                <li><a href="#">Find Us!</a></li>
+            </ul>
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="three column foo">
+        <h3>Join Our Email List!</h3>
+
+        <form>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>
+                <input type="text" placeholder="Enter Email Here"/>
+              </label>
+            </div>
+            <a href="#" class="button" id="submit-button">Submit</a>
+          </div>
+        </form>
+
+    </div>
+    
+    <!-- Third Column -->
+
+    <div class="four column foo">
+        <h3>Socialize</h3>
+             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/circle_icons/48x48/fb.png" width="50" height="50" /></a>
+             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/circle_icons/48x48/twitter.png" width="50" height="50" /></a>
+             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/circle_icons/48x48/tumblr.png" width="50" height="50" /></a>
+             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/circle_icons/48x48/youtube.png" width="50" height="50" /></a>
+             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/circle_icons/48x48/instagram.png" width="50" height="50" /></a>
+    </div>    
+        
+    <!-- Fourth Column -->
+    
+    <div class="two column foo">
+        <h3>Navigation</h3>
+            <ul class="footer_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">The Board</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Fashion Show</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Affiliates</a></li>
+            </ul>   
+    </div>
+
+    <div style="clear:both"></div>
+
+    </div>
+    
+    </footer> <!-- END footer -->		  
+
+<!-- ######################## Scripts ######################## --> 
+
+    <!-- Included JS Files (Compressed) -->
+    <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
+    <!-- Initialize JS Plugins -->
+    <script src="javascripts/app.js" type="text/javascript"></script>
+
+</body>
+</html>

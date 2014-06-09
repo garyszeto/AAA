@@ -25,7 +25,7 @@
   <script src="js/foundation/foundation.js"></script>
   <script src="js/foundation/foundation.equalizer.js"></script>
 
-  <script>
+  <script type="javascript">
      $(document).foundation();
   </script>
   
@@ -38,6 +38,11 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <script type="text/javascript" src="skrollr.js"></script>
+  <script type="text/javascript">
+      skrollr.init();
+  </script>
 
 </head>
 
@@ -55,7 +60,7 @@
                  <li class=""><a href="galleries.html">About</a></li>
                  <li class=""><a href="portfolio.html">The Board</a></li>
                  <li class=""><a href="pinterest-style.html">Events</a></li>
-                 <li class=""><a href="tiles.html">Fashion Show</a></li>
+                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
                  <li class=""><a href="contact.html">Contact Us</a></li>
                  <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
 
@@ -83,47 +88,50 @@
       
 <!-- ######################## Header ######################## -->
         
-        <header>
+<header data-0="background-position:0px 0px;" data-1000="background-position:0px -500px;">
 
-              <script>
-                  //set header height to window size
-                  $(document).ready(function(){
-                      resizeDiv();
-                  });
+      <script>
+          //set header height to window size, positions logo in center of viewport
+          $(document).ready(function(){
+              resizeDiv();
+          });
 
-                  window.onresize = function(event) {
-                      resizeDiv();
-                  }
+          window.onresize = function(event) {
+              resizeDiv();
+          }
 
-                  function resizeDiv() {
-                      vph = $(window).height();
-                      $('header').css({'height': vph + 'px'});
-                  }
-              </script>
+          function resizeDiv() {
+              vph = $(window).height();
+              vpw = $(window).width();
+              $('header').css({'height': vph + 'px'});
+              $('#logo').css({'top': vph/2 - $('#logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
+              $('#logo').css({'left': vpw/2 - $('#logo img').width()/2 + 'px'});
+          }
+      </script>
 
-              <script>
-                  //slideshow
-                  var images = new Array('img/s1.jpg','img/s2.jpg','img/s3.jpg', 'img/s4.jpg', 'img/s5.jpg');
-                  var nextimage=0;
+      <script>
+          //slideshow: add images in array
+          var images = new Array('img/s1.jpg','img/s2.jpg','img/s3.jpg', 'img/s4.jpg', 'img/s5.jpg');
+          var nextimage=0;
 
-                  doSlideshow();
+          doSlideshow();
 
-                  function doSlideshow()
-                  {
-                    if(nextimage>=images.length) nextimage=0;
-                    $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
-                  }
+          function doSlideshow()
+          {
+            if(nextimage>=images.length) nextimage=0;
+            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
+          }
 
-              </script>
+      </script>
 
-              <div style="position:absolute; left:37%; top:13%" >
-                  <img src="img/growing_young.png" width="400" height="400">
-              </div>
+      <div id="logo" style="position:absolute;">
+          <img src="img/growing_young.png" width="400" height="400">
+      </div>
 
 <!--               <h1 class="heading_supersize">Asian American Association</h1>
-              <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2> -->
+      <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2> -->
 
-        </header>
+</header>
 
 <!-- ######################## Section ######################## -->
 
@@ -151,7 +159,6 @@
       
 </section>        
       
-
 <!-- ######################## Section ######################## -->
 <!--      
    <section class="section_light">

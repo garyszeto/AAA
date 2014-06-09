@@ -85,7 +85,7 @@ hr {
 
 .page_wrap {margin: 0 auto 25px}
 
-header {/*min-height: 600px;*/ background: url('img/s1.jpg') no-repeat left top; background-size:cover; padding: 20px 0 40px;}
+header {background: url('img/s1.jpg') fixed no-repeat left top; background-size:cover; padding: 20px 0 40px;}
 
 
 .header_nav {background: #fafafa; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999; }
@@ -204,6 +204,8 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 .gallery-nav-bar li a {color: #000; padding: 3px 12px}
 
 .gallery-nav-bar li a:hover {background: #C02702; color: #FFF; padding: 3px 12px; border-radius: 3px}
+
+/*#testp {height: 600px; background: #262626 url('img/varun.jpg') fixed no-repeat; background-size:cover;}*/
 
 footer {font-size: .8em; padding: 30px 0px 50px; color: #b2b5b9; background-color: #262626;}
 footer h3 {color: #888d92}
