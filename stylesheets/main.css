@@ -116,6 +116,9 @@ h1,h2,h3,h4 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; 
 .section_main {padding: 50px 0; margin-bottom: 50px}
 .section_main h1 {font-size:6em; padding: 0 0 50px}
 
+.section_main2 {padding: 50px 0}
+.section_main2 h1 {font-size:6em; padding: 0 0 50px}
+
 /* END Frontpage sections */
 
 .heading_supersize {color: #ffffff; font-size: 128px; text-align:center; font-weight: normal; margin:150px 0 200px;}
