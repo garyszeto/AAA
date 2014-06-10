@@ -16,7 +16,6 @@
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/main.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
 
   <script src="javascripts/modernizr.foundation.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -88,12 +87,13 @@
       
 <!-- ######################## Header ######################## -->
         
-<header data-0="background-position:0px 0px;" data-1000="background-position:0px -500px;">
+<header>
 
       <script>
           //set header height to window size, positions logo in center of viewport
           $(document).ready(function(){
               resizeDiv();
+              setBackground();
           });
 
           window.onresize = function(event) {
@@ -102,34 +102,13 @@
 
           function resizeDiv() {
               vph = $(window).height();
-              vpw = $(window).width();
-              $('header').css({'height': vph + 'px'});
-              $('#logo').css({'top': vph/2 - $('#logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
-              $('#logo').css({'left': vpw/2 - $('#logo img').width()/2 + 'px'});
-          }
-      </script>
-
-      <script>
-          //slideshow: add images in array
-          var images = new Array('img/s1.jpg','img/s2.jpg','img/s3.jpg', 'img/s4.jpg', 'img/s5.jpg');
-          var nextimage=0;
-
-          doSlideshow();
-
-          function doSlideshow()
-          {
-            if(nextimage>=images.length) nextimage=0;
-            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
+              $('header').css({'height': vph*(11/16) + $('.nav-bar').height()/2 + 'px'});
           }
 
+          function setBackground() {
+              $('header').css({"background":"url('img/boardpic.jpg') fixed no-repeat","background-size":"cover"});
+          }
       </script>
-
-      <div id="logo" style="position:absolute;">
-          <img src="img/growing_young.png" width="400" height="400">
-      </div>
-
-<!--               <h1 class="heading_supersize">Asian American Association</h1>
-      <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2> -->
 
 </header>
 
@@ -137,104 +116,99 @@
 
 <section class="section_main">
 
-      <h1 style="text-align:center">Upcoming Events</h1>
+      <h1 style="text-align:center; padding: 10px 0 60px">Our Mission</h1>
+
+      <h2 style="text-align:center; padding: 0 250px 0"> The goal of Asian American Association for 2013-2014 is to establish a strong Pan Asian identity and promote active engagement with communities outside of AAA while maintaining a positive internal dynamic. </h2>
       
-      <div class="row" data-equalizer>
-      
-          <article class="six columns">
-                <div class="panel" data-equalizer-watch>
-                    <h3>T Shirt Design Contest</h3>
-                    <a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/event01.jpg"/></a>
-                </div>
-          </article>
-          
-          <article class="six columns">
-                <div class="panel" data-equalizer-watch>
-                    <h3>Fashion Show</h3>
-                    <a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/fashion_show.jpg"/></a>
-                </div>
-          </article>
-  
-      </div>
-      
-</section>        
-      
+</section>
+
 <!-- ######################## Section ######################## -->
-<!--      
-   <section class="section_light">
+     
+    <section class="section_light">
    
-        <div class="row">
+        <div class="row" style="padding: 30px 0 20px">
         
-         <div class="four columns">
-            <h3><span class="dropcap_red lsf-icon-dropcap" title="camera"></span> Photo Community</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, lacus id interdum ultrices, elit metus semper tellus, vel lacinia libero purus vitae risus.</p>
+         <div class="four columns panel" id="service" style="height:200px">
+            <div class="row" style="margin-bottom:20px">
+                <span class="four columns"><img src="img/service.png" height="48" width="48" ></span>
+                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Service</h3>
+            </div>
+            <p>To serve and promote the needs of Asian Americans at the University of Illinois Urbana-Champaign as well as within the local community.</p>
          </div>
          
       
-          <div class="four columns">
-            <h3><span class="dropcap_black lsf-icon-dropcap" title="cloud"></span> Upload Photos</h3>
-            <p> Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus.</p>
+          <div class="four columns panel" id="educate" style="height:200px">
+            <div class="row" style="margin-bottom:20px">
+                <span class="four columns"><img src="img/educate.png" height="48" width="48" ></span>
+                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Educate</h3>
+            </div>
+            <p>To educate the university and community on current Asian American issues as well as prejudices and stereotypes that people may harbor upon Asian Americans.</p>
           </div>
           
           
-          <div class="four columns">
-            <h3><span class="dropcap_black lsf-icon-dropcap" title="video"></span> Video Tutorials</h3>
-            <p>Sed vitae nisi leo. Nulla tincidunt, turpis non gravida pharetra, diam sapien posuere massa, non luctus leo mauris at sapien. Donec ut fermentum eros.</p>
+          <div class="four columns panel" style="height:200px">
+            <div class="row" style="margin-bottom:20px">
+                <span class="four columns"><img src="img/program.png" height="48" width="48" ></span>
+                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Program</h3>
+            </div>
+            <p>To promote awareness of Asian American heritage to the university and community through programming on Asian American history and culture.</p>
+          </div>
+        
+        </div>
+
+        <div class="row" style="padding: 0 0 10px">
+        
+         <div class="four columns panel" style="height:200px">
+            <div class="row" style="margin-bottom:20px">
+                <span class="four columns"><img src="img/socialize.png" height="48" width="48" ></span>
+                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Socialize</h3>
+            </div>
+            <p>To provide social activities and opportunities for Asian American Association members as well as nonmembers to build strong relationships and families.</p>
+         </div>
+         
+      
+          <div class="four columns panel" style="height:200px">
+            <div class="row" style="margin-bottom:20px">
+                <span class="four columns"><img src="img/collaborate.png" height="48" width="48" ></span>
+                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Collaborate</h3>
+            </div>
+            <p>To support and work in coalition with other organizationd who are willing to support and contribute to the protectection and services of Asian American community.</p>
+          </div>
+          
+          
+          <div class="four columns panel" id="network" style="height:200px">
+            <div class="row" style="margin-bottom:20px">
+                <span class="four columns"><img src="img/network.png" height="48" width="48" ></span>
+                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Network</h3>
+            </div>
+            <p>To network and maintain connections with Asian American Association's alumni to facilitate and strengthen the legacy of the organization.</p>
           </div>
         
         </div>
         
-    </section> -->
+        <script type="text/javascript">
+/*            $(document).ready(function(){
+                equalize();
+            });
 
-<!-- ######################## Section ######################## -->
+            window.onresize = function(event) {
+                equalize();
+            }
 
-<!--    <section  class="section_dark">
-   
-      <div class="row"> 
-      
-      <h2>Latest Photos by Our Members</h2>
-      
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb1.jpg" width="100" height="100" alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb2.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb3.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb4.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb5.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb6.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
+            function equalize() {
+                h = $('#educate').height();
+                $('#service').css({'min-height': h + 'px'});
+                $('#network').css({'height': h + 'px'});
+            }*/
+        </script>
 
-      
-      </div>
-      
-    </section> -->
-      
-
+    </section>
 
 <!-- ######################## Footer ######################## -->  
       
     <footer>
 
     <div class="row">
-
-<!--     <div class="two column foo" >
-        <img src="img/growing_young.png" height="200" width="200" >
-    </div> -->
-    <!-- First Column -->
 
     <div class="three column foo">
         <h3>Contact Us</h3>
@@ -301,8 +275,6 @@
     <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
     <!-- Initialize JS Plugins -->
     <script src="javascripts/app.js" type="text/javascript"></script>
-
-
 
 </body>
 </html>
