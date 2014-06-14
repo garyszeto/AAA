@@ -39,9 +39,9 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script type="text/javascript" src="skrollr.js"></script>
+  <script type="text/javascript" src="javascripts/skrollr.js"></script>
   <script type="text/javascript">
-      skrollr.init();
+      $(document).ready(function(){skrollr.init();});
   </script>
 
 </head>
@@ -88,7 +88,7 @@
       
 <!-- ######################## Header ######################## -->
         
-<header data-0="background-position:0px 0px;" data-1000="background-position:0px -500px;">
+<header>
 
       <script>
           //set header height to window size, positions logo in center of viewport
@@ -124,7 +124,7 @@
 
       </script>
 
-      <div id="logo" style="position:absolute;">
+      <div id="logo" style="position:fixed" data-0="opacity:1;" data-400="opacity:0;">
           <img src="img/aaa.png" width="1000">
       </div>
 
