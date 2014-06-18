@@ -11,12 +11,11 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>AAA UIUC</title>
+  <title>AAA UIUC - Events</title>
   
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/main.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
 
   <script src="javascripts/modernizr.foundation.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -39,9 +38,9 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script type="text/javascript" src="javascripts/skrollr.js"></script>
+  <script type="text/javascript" src="skrollr.js"></script>
   <script type="text/javascript">
-      $(document).ready(function(){skrollr.init();});
+      skrollr.init();
   </script>
 
 </head>
@@ -85,162 +84,170 @@
       
 </nav>
       
-      
-<!-- ######################## Header ######################## -->
-        
-<header>
-
-      <script>
-          //set header height to window size, positions logo in center of viewport
-          $(document).ready(function(){
-              resizeDiv();
-          });
-
-          window.onresize = function(event) {
-              resizeDiv();
-          }
-
-          function resizeDiv() {
-              vph = $(window).height();
-              vpw = $(window).width();
-              $('header').css({'height': vph + 'px'});
-              $('#logo').css({'top': vph/2 - $('#logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
-              $('#logo').css({'left': vpw/2 - $('#logo img').width()/2 + 'px'});
-          }
-      </script>
-
-      <script>
-          //slideshow: add images in array
-          var images = new Array('img/s1.jpg','img/s2.jpg','img/s3.jpg', 'img/s4.jpg', 'img/s5.jpg');
-          var nextimage=0;
-
-          doSlideshow();
-
-          function doSlideshow()
-          {
-            if(nextimage>=images.length) nextimage=0;
-            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
-          }
-
-      </script>
-
-      <div id="logo" style="position:fixed" data-0="opacity:1;" data-400="opacity:0;">
-          <img src="img/aaa.png" width="1000">
-      </div>
-
-<!--               <h1 class="heading_supersize">Asian American Association</h1>
-      <h2 class="welcome_text">University of Illinois Urbana-Champaign. Established 1986</h2> -->
-
-</header>
-
 <!-- ######################## Section ######################## -->
 
-<section class="section_main">
+<section class="section_main2" style="padding-top:120px; padding-bottom: 0px; background-color: #262626;">
 
-      <h1 style="text-align:center">Upcoming Events</h1>
+      <h1 style="text-align:center; color: #ffffff;">Upcoming Events</h1>
       
-      <div class="row" data-equalizer>
+      <div class="row" data-equalizer style="padding-bottom:60px">
       
           <article class="six columns" id="e1">
-                <div class="panel" data-equalizer-watch>
-                    <h3>T Shirt Design Contest</h3>
-                    <a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/event01.jpg"/></a>
+                <div class="panel shadow" data-equalizer-watch style="background-color: #F06B48; border:0px">
+                    <h3 style="color:#ffffff">T Shirt Design Contest</h3>
+                    <div class="shadow2"><a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/event01.jpg"/></a></div>
                 </div>
           </article>
           
           <article class="six columns">
-                <div class="panel" data-equalizer-watch id="e2">
-                    <h3>Fashion Show</h3>
-                    <a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/fashion_show.jpg"/></a>
+                <div class="panel shadow" data-equalizer-watch id="e2" style="background-color: #F06B48; border:0px">
+                    <h3 style="color:#ffffff">Fashion Show</h3>
+                    <div class="shadow2"><a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/fashion_show.jpg"/></a></div>
                 </div>
           </article>
+
+      <style type="text/css">
+          
+          .shadow {
+             -moz-box-shadow:    inset 0 0 10px #000000;
+             -webkit-box-shadow: inset 0 0 10px #000000;
+             box-shadow:         inset 0 0 20px #000000;
+          }
+
+          .shadow2{box-shadow: 0 0 30px #262626;}
+         
+      </style>
   
       </div>
-      
+
       <script type="text/javascript">
           $(document).ready(function(){
               $('#e2').css({'height': + $('#e1').height() - 22 + 'px'});
           });
       </script>
+      
+</section> 
 
-</section>        
-      
 <!-- ######################## Section ######################## -->
-<!--      
-   <section class="section_light">
-   
-        <div class="row">
+     
+    <section class="section_light">
+
+        <div class="row" style="padding: 30px 0 20px" id="annual">
         
-         <div class="four columns">
-            <h3><span class="dropcap_red lsf-icon-dropcap" title="camera"></span> Photo Community</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, lacus id interdum ultrices, elit metus semper tellus, vel lacinia libero purus vitae risus.</p>
-         </div>
-         
-      
-          <div class="four columns">
-            <h3><span class="dropcap_black lsf-icon-dropcap" title="cloud"></span> Upload Photos</h3>
-            <p> Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus.</p>
-          </div>
-          
-          
-          <div class="four columns">
-            <h3><span class="dropcap_black lsf-icon-dropcap" title="video"></span> Video Tutorials</h3>
-            <p>Sed vitae nisi leo. Nulla tincidunt, turpis non gravida pharetra, diam sapien posuere massa, non luctus leo mauris at sapien. Donec ut fermentum eros.</p>
-          </div>
+            <h1 style="text-align:center; font-size: 6em">Annual Events</h1>
+
+            <style type="text/css">
+                #annual div p {font-size: 17px;}
+            </style>
+
+            <div class="eight columns panel">
+                <img src="img/annual/asiantation.jpg">
+            </div>
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Asiantation</h3>
+                <p>An event organized by Asian Pacific American Coalition (APAC) that offers new incoming students an opportunities to get involved in Asian Culture.</p>
+            </div>
+
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Capture The Flag</h3>
+                <p>Capture the Flag is a tournament hosted by the various APAC organizations to compete in a vigorous sports competition to strengthen bonds and invigorate team and organization spirit.</p>
+            </div>             
         
+            <div class="eight columns panel">
+                <img src="img/annual/ctf.jpg">
+            </div>
+            
+
+            <div class="eight columns panel">
+                <img src="img/annual/fo.jpg">
+            </div>
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Family Olympiad</h3>
+                <p>AAA Families are groups of AAA members to foster strong membership, and in family olympiad, they will compete in a series of relay races and challenging activities to promote bondings and foster strong relationships.</p>
+            </div>
+
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Semiformal</h3>
+                <p>Semiformal is an AAA social event that takes place first semester to commemorate accomplishments and socialize with members to strengthen relationships.</p>
+            </div>             
+        
+            <div class="eight columns panel">
+                <img src="img/annual/semi.jpg">
+            </div>
+
+
+            <div class="eight columns panel">
+                <a href="fashion_show.html"><img src="img/annual/fs.jpg"></a>
+            </div>
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Fashion Show</h3>
+                <p>The annual modern and cultural dance performance that promotes AAA, Asians, and Asian American culture and identity that welcomes AAA Alumni to come and watch.</p>
+            </div>
+
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">MAASU</h3>
+                <p>A spring conference organized by the Midwest Asian American Students Union that unites people who are interested in Asian American culture in the Midwest area.</p>
+            </div>             
+        
+            <div class="eight columns panel">
+                <img src="img/annual/maasu.jpg">
+            </div>
+
+
+            <div class="eight columns panel">
+                <img src="img/annual/palo.jpg">
+            </div>
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">AAA Palooza</h3>
+                <p>An event showcases a large variety of Asian American talent and culture from students both within and outside the APAC at UIUC. </p>
+            </div>
+
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Study Nights</h3>
+                <p>Study Nights are frequent casual events hosted by AAA to create a synergistic study atmosphere for students to not only mutually work together but also to socialize and alleviate stress.</p>
+            </div>             
+        
+            <div class="eight columns panel">
+                <img src="img/annual/study.jpg">
+            </div>
+
+
+            <div class="eight columns panel">
+                <img src="img/annual/toa.jpg">
+            </div>
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Taste Of Asia</h3>
+                <p>An event, hosted by AAA, that gathers other APAC organizations to share their cultures’ respective dishes in a giant potluck to advocate cultural awareness.</p>
+            </div>
+
+
+            <div class="four columns panel" style="height:408px">
+                <h3 style="font-size: 50px">Formal</h3>
+                <p>The finale event in which members formally gather to reflect and commemorate the year and happily rejoice with the friendships and familial bondings that were made.</p>
+            </div>             
+        
+            <div class="eight columns panel">
+                <img src="img/annual/formal.jpg">
+            </div>            
+                                                            
         </div>
-        
-    </section> -->
 
-<!-- ######################## Section ######################## -->
-
-<!--    <section  class="section_dark">
-   
-      <div class="row"> 
-      
-      <h2>Latest Photos by Our Members</h2>
-      
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb1.jpg" width="100" height="100" alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb2.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb3.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb4.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb5.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-          
-          <div class="two columns">
-          <a href="#" class="th"><img src="images/thumb6.jpg" width="100" height="100"  alt="desc" /></a>
-          </div>
-
-      
-      </div>
-      
-    </section> -->
-      
-
+    </section>
 
 <!-- ######################## Footer ######################## -->  
       
     <footer>
 
     <div class="row">
-
-<!--     <div class="two column foo" >
-        <img src="img/growing_young.png" height="200" width="200" >
-    </div> -->
-    <!-- First Column -->
 
     <div class="three column foo">
         <h3>Contact Us</h3>
@@ -307,8 +314,6 @@
     <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
     <!-- Initialize JS Plugins -->
     <script src="javascripts/app.js" type="text/javascript"></script>
-
-
 
 </body>
 </html>
