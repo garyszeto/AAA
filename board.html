@@ -57,9 +57,9 @@
 
 	            <ul id="menu-header" class="nav-bar horizontal">
 	                 <li class="active"><a href="index.html">Home</a></li>
-	                 <li class=""><a href="galleries.html">About</a></li>
+	                 <li class=""><a href="about.html">About</a></li>
 	                 <li class=""><a href="board.html">The Board</a></li>
-	                 <li class=""><a href="pinterest-style.html">Events</a></li>
+	                 <li class=""><a href="events.html">Events</a></li>
 	                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
 	                 <li class=""><a href="contact.html">Contact Us</a></li>
 	                 <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
@@ -85,13 +85,16 @@
 	      
 	</nav>
 
-<!-- ######################## Section ######################## -->
 
-<header data-0="background-position:0px 0px;" data-1000="background-position:0px -500px;">
-   	  <script>
+<!-- ######################## Header ######################## -->
+        
+<header>
+
+      <script>
           //set header height to window size, positions logo in center of viewport
           $(document).ready(function(){
               resizeDiv();
+              setBackground();
           });
 
           window.onresize = function(event) {
@@ -100,14 +103,16 @@
 
           function resizeDiv() {
               vph = $(window).height();
-              vpw = $(window).width();
-              $('header').css({'height': vph + 'px'});\
+              $('header').css({'height': vph*(11/16) + $('.nav-bar').height()/2 + 'px'});
+          }
+
+          function setBackground() {
+              $('header').css({"background":"url('img/boardpic.jpg') fixed no-repeat","background-size":"cover"});
           }
       </script>
-    <script type="text/javascript">
-        $('header').css({"background":"url('img/board.jpg') fixed no-repeat center", "height":"640px"});
-    </script>   
-</header>  
+
+</header>
+
 <!-- ######################## Section ######################## -->
 
 	<section class="section_main">
