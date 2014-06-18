@@ -1,47 +1,21 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 
 <head>
 
   <meta charset="utf-8" />
   <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width">
 
   <title>AAA UIUC - About</title>
   
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
-  <script src="javascripts/modernizr.foundation.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css'/>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/foundation/foundation.js"></script>
-  <script src="js/foundation/foundation.equalizer.js"></script>
-
-  <script type="javascript">
-     $(document).foundation();
-  </script>
-  
-  <link rel="stylesheet" href="ligature.css">
-  
-  <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <script type="text/javascript" src="skrollr.js"></script>
-  <script type="text/javascript">
-      skrollr.init();
-  </script>
+  <script src="js/modernizr.foundation.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
 
 </head>
 
@@ -52,63 +26,53 @@
 <nav>
 
      <div style="position:fixed" class="twelve columns header_nav">
-     <div class="row">
+         <div class="row">
+               <ul id="menu-header" class="nav-bar horizontal">
+                     <li class="active"><a href="index.html">Home</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a href="board.html">The Board</a></li>
+                     <li><a href="events.html">Events</a></li>
+                     <li><a href="fashion_show.html">Fashion Show</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                     <li><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
 
-            <ul id="menu-header" class="nav-bar horizontal">
-                 <li class="active"><a href="index.html">Home</a></li>
-                 <li class=""><a href="about.html">About</a></li>
-                 <li class=""><a href="board.html">The Board</a></li>
-                 <li class=""><a href="events.html">Events</a></li>
-                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
-                 <li class=""><a href="contact.html">Contact Us</a></li>
-                 <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
-
-                 <span style="float:right">
-                 <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/fb.png" width="50" height="50" /></a>
-                 <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/tw.png" width="50" height="50" /></a>
-                 <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/tr.png" width="50" height="50" /></a>
-                 <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/yt.png" width="50" height="50" /></a>
-                 <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/in.png" width="50" height="50" /></a>
-                 <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/zz.png" width="50" height="50" /></a>
-                 </span>
-            </ul>
-        
-        <script type="text/javascript">
-         //<![CDATA[
-         $('ul#menu-header').nav-bar();
-          //]]>
-        </script>
-        
-      </div>  
+                     <span style="float:right">
+                     <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/nav_bar_flags/fb.png"/></a>
+                     <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/nav_bar_flags/tw.png"/></a>
+                     <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/nav_bar_flags/tr.png"/></a>
+                     <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/nav_bar_flags/yt.png"/></a>
+                     <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/nav_bar_flags/in.png"/></a>
+                     <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/nav_bar_flags/zz.png"/></a>
+                     </span>
+                </ul>   
+          </div>  
       </div>
       
-</nav>
-      
+</nav>      
       
 <!-- ######################## Header ######################## -->
         
-<header>
+<header data-0="background-position:0px 0px" data-600="background-position: 0px -150px">
 
-      <script>
-          //set header height to window size, positions logo in center of viewport
-          $(document).ready(function(){
-              resizeDiv();
-              setBackground();
-          });
+  <script type="text/javascript">
+      $(document).ready(function(){
+          resizeDiv();
+          setBackground();
+      });
 
-          window.onresize = function(event) {
-              resizeDiv();
-          }
+      window.onresize = function(event) {
+          resizeDiv();
+      }
 
-          function resizeDiv() {
-              vph = $(window).height();
-              $('header').css({'height': vph*(11/16) + $('.nav-bar').height()/2 + 'px'});
-          }
+      function resizeDiv() {
+          vph = $(window).height();
+          $('header').css({'height': vph*(11/16) + $('.nav-bar').height()/2 + 'px'});
+      }
 
-          function setBackground() {
-              $('header').css({"background":"url('img/boardpic.jpg') fixed no-repeat","background-size":"cover"});
-          }
-      </script>
+      function setBackground() {
+          $('header').css({"background":"url('img/boardpic.jpg') fixed no-repeat","background-size":"cover"});
+      }      
+  </script>
 
 </header>
 
@@ -124,93 +88,79 @@
 
 <!-- ######################## Section ######################## -->
      
-    <section class="section_light">
-   
-        <div class="row" style="padding: 30px 0 20px">
-        
-         <div class="four columns panel" id="service" style="height:200px">
-            <div class="row" style="margin-bottom:20px">
-                <span class="four columns"><img src="img/service.png" height="48" width="48" ></span>
-                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Service</h3>
-            </div>
-            <p>To serve and promote the needs of Asian Americans at the University of Illinois Urbana-Champaign as well as within the local community.</p>
-         </div>
-         
-      
-          <div class="four columns panel" id="educate" style="height:200px">
-            <div class="row" style="margin-bottom:20px">
-                <span class="four columns"><img src="img/educate.png" height="48" width="48" ></span>
-                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Educate</h3>
-            </div>
-            <p>To educate the university and community on current Asian American issues as well as prejudices and stereotypes that people may harbor upon Asian Americans.</p>
-          </div>
-          
-          
-          <div class="four columns panel" style="height:200px">
-            <div class="row" style="margin-bottom:20px">
-                <span class="four columns"><img src="img/program.png" height="48" width="48" ></span>
-                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Program</h3>
-            </div>
-            <p>To promote awareness of Asian American heritage to the university and community through programming on Asian American history and culture.</p>
-          </div>
-        
-        </div>
+<section class="section_light">
 
-        <div class="row" style="padding: 0 0 10px">
-        
-         <div class="four columns panel" style="height:200px">
-            <div class="row" style="margin-bottom:20px">
-                <span class="four columns"><img src="img/socialize.png" height="48" width="48" ></span>
-                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Socialize</h3>
-            </div>
-            <p>To provide social activities and opportunities for Asian American Association members as well as nonmembers to build strong relationships and families.</p>
-         </div>
-         
-      
-          <div class="four columns panel" style="height:200px">
-            <div class="row" style="margin-bottom:20px">
-                <span class="four columns"><img src="img/collaborate.png" height="48" width="48" ></span>
-                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Collaborate</h3>
-            </div>
-            <p>To support and work in coalition with other organizationd who are willing to support and contribute to the protectection and services of Asian American community.</p>
+    <div class="row about-cards" style="padding: 30px 0 20px">
+    
+       <div class="four columns panel">
+          <div class="row">
+              <span class="four columns"><img src="img/about_icons/service.png"></span>
+              <h3 class="eight columns">Service</h3>
           </div>
-          
-          
-          <div class="four columns panel" id="network" style="height:200px">
-            <div class="row" style="margin-bottom:20px">
-                <span class="four columns"><img src="img/network.png" height="48" width="48" ></span>
-                <h3 class="eight columns" style="font-size: 36px; padding: 0 0 0; margin: 0 0 0">Network</h3>
-            </div>
-            <p>To network and maintain connections with Asian American Association's alumni to facilitate and strengthen the legacy of the organization.</p>
+          <p>To serve and promote the needs of Asian Americans at the University of Illinois Urbana-Champaign as well as within the local community.</p>
+       </div>
+       
+    
+        <div class="four columns panel">
+          <div class="row">
+              <span class="four columns"><img src="img/about_icons/educate.png"></span>
+              <h3 class="eight columns">Educate</h3>
           </div>
-        
+          <p>To educate the university and community on current Asian American issues as well as prejudices and stereotypes that people may harbor upon Asian Americans.</p>
         </div>
         
-        <script type="text/javascript">
-/*            $(document).ready(function(){
-                equalize();
-            });
+        
+        <div class="four columns panel">
+          <div class="row">
+              <span class="four columns"><img src="img/about_icons/program.png"></span>
+              <h3 class="eight columns">Program</h3>
+          </div>
+          <p>To promote awareness of Asian American heritage to the university and community through programming on Asian American history and culture.</p>
+        </div>
+    
+    </div>
 
-            window.onresize = function(event) {
-                equalize();
-            }
+    <div class="row about-cards" style="padding: 0 0 10px">
+    
+       <div class="four columns panel">
+          <div class="row">
+              <span class="four columns"><img src="img/about_icons/socialize.png"></span>
+              <h3 class="eight columns">Socialize</h3>
+          </div>
+          <p>To provide social activities and opportunities for Asian American Association members as well as nonmembers to build strong relationships and families.</p>
+       </div>
+       
+    
+        <div class="four columns panel">
+          <div class="row">
+              <span class="four columns"><img src="img/about_icons/collaborate.png"></span>
+              <h3 class="eight columns">Collaborate</h3>
+          </div>
+          <p>To support and work in coalition with other organizationd who are willing to support and contribute to the protectection and services of Asian American community.</p>
+        </div>
+        
+        
+        <div class="four columns panel">
+          <div class="row">
+              <span class="four columns"><img src="img/about_icons/network.png"></span>
+              <h3 class="eight columns">Network</h3>
+          </div>
+          <p>To network and maintain connections with Asian American Association's alumni to facilitate and strengthen the legacy of the organization.</p>
+        </div>
+    
+    </div>
 
-            function equalize() {
-                h = $('#educate').height();
-                $('#service').css({'min-height': h + 'px'});
-                $('#network').css({'height': h + 'px'});
-            }*/
-        </script>
-
-    </section>
+</section>
 
 <!-- ######################## Footer ######################## -->  
       
-    <footer>
+<footer>
 
     <div class="row">
 
-    <div class="three column foo">
+    <!-- First Column -->
+
+    <div class="three column">
         <h3>Contact Us</h3>
             <ul class="footer_links">
                 <li><span style="color:#2ba6cb">Email: aaauiuc@gmail.com</span></li>
@@ -221,7 +171,7 @@
     
     <!-- Second Column -->
     
-    <div class="three column foo">
+    <div class="three column">
         <h3>Join Our Email List!</h3>
 
         <form>
@@ -239,18 +189,18 @@
     
     <!-- Third Column -->
 
-    <div class="four column foo">
+    <div class="four column">
         <h3>Socialize</h3>
-             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/circle_icons/48x48/fb.png" width="50" height="50" /></a>
-             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/circle_icons/48x48/twitter.png" width="50" height="50" /></a>
-             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/circle_icons/48x48/tumblr.png" width="50" height="50" /></a>
-             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/circle_icons/48x48/youtube.png" width="50" height="50" /></a>
-             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/circle_icons/48x48/instagram.png" width="50" height="50" /></a>
+             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/footer_icons/fb.png"/></a>
+             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/footer_icons/twitter.png"/></a>
+             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/footer_icons/tumblr.png"/></a>
+             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/footer_icons/youtube.png"/></a>
+             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/footer_icons/instagram.png"/></a>
     </div>    
         
     <!-- Fourth Column -->
     
-    <div class="two column foo">
+    <div class="two column">
         <h3>Navigation</h3>
             <ul class="footer_links">
                 <li><a href="index.html">Home</a></li>
@@ -263,18 +213,27 @@
             </ul>   
     </div>
 
-    <div style="clear:both"></div>
-
     </div>
     
-    </footer> <!-- END footer -->		  
+</footer> 	  
 
 <!-- ######################## Scripts ######################## --> 
+  <script src="js/foundation.min.js" type="text/javascript"></script> 
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/foundation/foundation.equalizer.js"></script>
 
-    <!-- Included JS Files (Compressed) -->
-    <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
-    <!-- Initialize JS Plugins -->
-    <script src="javascripts/app.js" type="text/javascript"></script>
+  <script type="javascript">
+        $(document).foundation();
+  </script>
+
+  <script type="text/javascript" src="js/skrollr.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        skrollr.init({
+          smoothScrolling: false
+        });
+      });
+  </script>
 
 </body>
 </html>
