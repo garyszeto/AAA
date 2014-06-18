@@ -1,0 +1,76 @@
+/*main elements*/
+body {background: #fafafa;}
+h1,h2,h3,h4,h5 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; color: #333;}
+p {color: #333}
+header {background: url('img/s1.jpg') fixed no-repeat left top; background-size:cover; padding: 20px 0 40px;}
+footer {font-size: .8em; padding: 30px 0px 30px; color: #b2b5b9; background-color: #262626;}
+footer h3 {color: #888d92}
+
+/*sets width for all row elements (built into foundation)*/
+.row {width: 1100px;}
+
+/*nav bar*/
+.header_nav {background: #fafafa; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999;}
+
+.nav-bar {margin-top: 0; background: none;}
+.nav-bar > li {margin: 25px 0 25px; border: 0; padding: 0; font-family: 'Open Sans Condensed',sans-serif; letter-spacing: 1px; box-shadow: none}
+.nav-bar > li > a:first-child {font-size: 16px; text-transform: uppercase; padding: 0 25px}
+.nav-bar > li:last-child {border: 0; box-shadow: none}
+.nav-bar > li.active:hover {background: #000; cursor: default;}
+.nav-bar > li:hover { background: #eeeeee; color: #000;         
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; 
+}
+.nav-bar > li > a {color: #4d4d4d}
+.nav-bar > li > a:hover {color: #000;}
+.active a {background:#F06B48; color: #FFF}
+
+/*nav bar flags*/
+#menu-header img {width: 40px; height: 40px;}
+
+/* sections */
+.section_light {background: #FFF; border-top: 1px dotted #999; border-bottom: 1px dotted #999; padding: 20px 0; clear:both}
+.section_light h1 {text-align: center; border-bottom: 1px dotted #999; padding-bottom: 20px; margin: 0 0 20px 0}
+.section_main {padding: 50px 0; margin-bottom: 50px}
+.section_main h1 {font-size:6em; padding: 0 0 50px}
+.section_events {padding: 50px 0; padding-top:120px; padding-bottom: 0px; background-color: #262626;}
+.section_events h1 {font-size:6em; padding: 0 0 50px}
+
+/*submit button in footer*/
+#submit-button {width:165px; margin-right:5px; margin-left:5px}
+
+/*about page*/
+.about-cards img {height: 48px; width: 48px;}
+.about-cards h3 {font-size: 36px; padding: 0 0 0; margin: 0 0 0}
+.about-cards .panel {height: 200px;}
+.about-cards .panel .row {margin-bottom: 20px;}
+
+/*events page*/
+.section_events .row {padding-bottom:60px}
+.section_events .panel {background-color: #F06B48; border:0px}
+.section_events h1, .section_events h3 {color:#ffffff}
+.shadow {
+ -moz-box-shadow:    inset 0 0 10px #000000;
+ -webkit-box-shadow: inset 0 0 10px #000000;
+ box-shadow:         inset 0 0 20px #000000;
+}
+.shadow2{box-shadow: 0 0 30px #262626;}
+#annual-events h1 {font-size: 6em; text-align:center;}
+#annual-events h3 {font-size: 50px;}
+#annual-events p {font-size: 17px;}
+#annual-events .panel {height:408px;}
+
+/*fashion show page*/
+.fs h1 {text-align:center}
+.fs h2 {text-align:center; padding: 0 150px 50px;}
+.fs h3 {text-align:center; padding: 0 0 30px};
+/*not working properly, deal with it after we get everyone's pic*/
+/*.fs img {height: 300px; width: 300px;} */
+
+/*contact page*/
+.swag {padding-left: 50px;}
+.contact-info .row {padding-top: 25px;}
+.contact-info img {height: 100px; width: 100px;}

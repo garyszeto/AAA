@@ -1,47 +1,21 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 
 <head>
 
   <meta charset="utf-8" />
   <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width">
 
   <title>AAA UIUC - Events</title>
   
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
-  <script src="javascripts/modernizr.foundation.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css'/>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/foundation/foundation.js"></script>
-  <script src="js/foundation/foundation.equalizer.js"></script>
-
-  <script type="javascript">
-     $(document).foundation();
-  </script>
-  
-  <link rel="stylesheet" href="ligature.css">
-  
-  <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <script type="text/javascript" src="skrollr.js"></script>
-  <script type="text/javascript">
-      skrollr.init();
-  </script>
+  <script src="js/modernizr.foundation.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
 
 </head>
 
@@ -52,71 +26,51 @@
 <nav>
 
      <div style="position:fixed" class="twelve columns header_nav">
-     <div class="row">
+         <div class="row">
+               <ul id="menu-header" class="nav-bar horizontal">
+                     <li class="active"><a href="index.html">Home</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a href="board.html">The Board</a></li>
+                     <li><a href="events.html">Events</a></li>
+                     <li><a href="fashion_show.html">Fashion Show</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                     <li><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
 
-            <ul id="menu-header" class="nav-bar horizontal">
-                 <li class="active"><a href="index.html">Home</a></li>
-                 <li class=""><a href="about.html">About</a></li>
-                 <li class=""><a href="board.html">The Board</a></li>
-                 <li class=""><a href="events.html">Events</a></li>
-                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
-                 <li class=""><a href="contact.html">Contact Us</a></li>
-                 <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
-
-                 <span style="float:right">
-                 <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/fb.png" width="50" height="50" /></a>
-                 <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/tw.png" width="50" height="50" /></a>
-                 <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/tr.png" width="50" height="50" /></a>
-                 <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/yt.png" width="50" height="50" /></a>
-                 <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/in.png" width="50" height="50" /></a>
-                 <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/zz.png" width="50" height="50" /></a>
-                 </span>
-            </ul>
-        
-        <script type="text/javascript">
-         //<![CDATA[
-         $('ul#menu-header').nav-bar();
-          //]]>
-        </script>
-        
-      </div>  
+                     <span style="float:right">
+                     <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/nav_bar_flags/fb.png"/></a>
+                     <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/nav_bar_flags/tw.png"/></a>
+                     <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/nav_bar_flags/tr.png"/></a>
+                     <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/nav_bar_flags/yt.png"/></a>
+                     <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/nav_bar_flags/in.png"/></a>
+                     <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/nav_bar_flags/zz.png"/></a>
+                     </span>
+                </ul>   
+          </div>  
       </div>
       
 </nav>
       
 <!-- ######################## Section ######################## -->
 
-<section class="section_main2" style="padding-top:120px; padding-bottom: 0px; background-color: #262626;">
+<section class="section_events">
 
-      <h1 style="text-align:center; color: #ffffff;">Upcoming Events</h1>
+      <h1 style="text-align:center">Upcoming Events</h1>
       
-      <div class="row" data-equalizer style="padding-bottom:60px">
+      <div class="row" data-equalizer>
       
           <article class="six columns" id="e1">
-                <div class="panel shadow" data-equalizer-watch style="background-color: #F06B48; border:0px">
-                    <h3 style="color:#ffffff">T Shirt Design Contest</h3>
-                    <div class="shadow2"><a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/event01.jpg"/></a></div>
+                <div class="panel shadow" data-equalizer-watch>
+                    <h3>T Shirt Design Contest</h3>
+                    <div class="shadow2"><a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/events/event01.jpg"/></a></div>
                 </div>
           </article>
           
           <article class="six columns">
-                <div class="panel shadow" data-equalizer-watch id="e2" style="background-color: #F06B48; border:0px">
-                    <h3 style="color:#ffffff">Fashion Show</h3>
-                    <div class="shadow2"><a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/fashion_show.jpg"/></a></div>
+                <div class="panel shadow" data-equalizer-watch id="e2">
+                    <h3>Fashion Show</h3>
+                    <div class="shadow2"><a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/events/fashion_show.jpg"/></a></div>
                 </div>
           </article>
-
-      <style type="text/css">
-          
-          .shadow {
-             -moz-box-shadow:    inset 0 0 10px #000000;
-             -webkit-box-shadow: inset 0 0 10px #000000;
-             box-shadow:         inset 0 0 20px #000000;
-          }
-
-          .shadow2{box-shadow: 0 0 30px #262626;}
-         
-      </style>
   
       </div>
 
@@ -132,26 +86,22 @@
      
     <section class="section_light">
 
-        <div class="row" style="padding: 30px 0 20px" id="annual">
+        <div class="row" style="padding: 30px 0 20px" id="annual-events">
         
-            <h1 style="text-align:center; font-size: 6em">Annual Events</h1>
-
-            <style type="text/css">
-                #annual div p {font-size: 17px;}
-            </style>
+            <h1>Annual Events</h1>
 
             <div class="eight columns panel">
                 <img src="img/annual/asiantation.jpg">
             </div>
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Asiantation</h3>
+            <div class="four columns panel">
+                <h3>Asiantation</h3>
                 <p>An event organized by Asian Pacific American Coalition (APAC) that offers new incoming students an opportunities to get involved in Asian Culture.</p>
             </div>
 
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Capture The Flag</h3>
+            <div class="four columns panel">
+                <h3>Capture The Flag</h3>
                 <p>Capture the Flag is a tournament hosted by the various APAC organizations to compete in a vigorous sports competition to strengthen bonds and invigorate team and organization spirit.</p>
             </div>             
         
@@ -164,14 +114,14 @@
                 <img src="img/annual/fo.jpg">
             </div>
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Family Olympiad</h3>
+            <div class="four columns panel">
+                <h3>Family Olympiad</h3>
                 <p>AAA Families are groups of AAA members to foster strong membership, and in family olympiad, they will compete in a series of relay races and challenging activities to promote bondings and foster strong relationships.</p>
             </div>
 
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Semiformal</h3>
+            <div class="four columns panel">
+                <h3>Semiformal</h3>
                 <p>Semiformal is an AAA social event that takes place first semester to commemorate accomplishments and socialize with members to strengthen relationships.</p>
             </div>             
         
@@ -184,14 +134,14 @@
                 <a href="fashion_show.html"><img src="img/annual/fs.jpg"></a>
             </div>
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Fashion Show</h3>
+            <div class="four columns panel">
+                <h3>Fashion Show</h3>
                 <p>The annual modern and cultural dance performance that promotes AAA, Asians, and Asian American culture and identity that welcomes AAA Alumni to come and watch.</p>
             </div>
 
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">MAASU</h3>
+            <div class="four columns panel">
+                <h3>MAASU</h3>
                 <p>A spring conference organized by the Midwest Asian American Students Union that unites people who are interested in Asian American culture in the Midwest area.</p>
             </div>             
         
@@ -204,14 +154,14 @@
                 <img src="img/annual/palo.jpg">
             </div>
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">AAA Palooza</h3>
+            <div class="four columns panel">
+                <h3>AAA Palooza</h3>
                 <p>An event showcases a large variety of Asian American talent and culture from students both within and outside the APAC at UIUC. </p>
             </div>
 
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Study Nights</h3>
+            <div class="four columns panel">
+                <h3>Study Nights</h3>
                 <p>Study Nights are frequent casual events hosted by AAA to create a synergistic study atmosphere for students to not only mutually work together but also to socialize and alleviate stress.</p>
             </div>             
         
@@ -224,14 +174,14 @@
                 <img src="img/annual/toa.jpg">
             </div>
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Taste Of Asia</h3>
+            <div class="four columns panel">
+                <h3>Taste Of Asia</h3>
                 <p>An event, hosted by AAA, that gathers other APAC organizations to share their cultures’ respective dishes in a giant potluck to advocate cultural awareness.</p>
             </div>
 
 
-            <div class="four columns panel" style="height:408px">
-                <h3 style="font-size: 50px">Formal</h3>
+            <div class="four columns panel">
+                <h3>Formal</h3>
                 <p>The finale event in which members formally gather to reflect and commemorate the year and happily rejoice with the friendships and familial bondings that were made.</p>
             </div>             
         
@@ -245,11 +195,13 @@
 
 <!-- ######################## Footer ######################## -->  
       
-    <footer>
+<footer>
 
     <div class="row">
 
-    <div class="three column foo">
+    <!-- First Column -->
+
+    <div class="three column">
         <h3>Contact Us</h3>
             <ul class="footer_links">
                 <li><span style="color:#2ba6cb">Email: aaauiuc@gmail.com</span></li>
@@ -260,7 +212,7 @@
     
     <!-- Second Column -->
     
-    <div class="three column foo">
+    <div class="three column">
         <h3>Join Our Email List!</h3>
 
         <form>
@@ -278,18 +230,18 @@
     
     <!-- Third Column -->
 
-    <div class="four column foo">
+    <div class="four column">
         <h3>Socialize</h3>
-             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/circle_icons/48x48/fb.png" width="50" height="50" /></a>
-             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/circle_icons/48x48/twitter.png" width="50" height="50" /></a>
-             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/circle_icons/48x48/tumblr.png" width="50" height="50" /></a>
-             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/circle_icons/48x48/youtube.png" width="50" height="50" /></a>
-             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/circle_icons/48x48/instagram.png" width="50" height="50" /></a>
+             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/footer_icons/fb.png"/></a>
+             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/footer_icons/twitter.png"/></a>
+             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/footer_icons/tumblr.png"/></a>
+             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/footer_icons/youtube.png"/></a>
+             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/footer_icons/instagram.png"/></a>
     </div>    
         
     <!-- Fourth Column -->
     
-    <div class="two column foo">
+    <div class="two column">
         <h3>Navigation</h3>
             <ul class="footer_links">
                 <li><a href="index.html">Home</a></li>
@@ -302,18 +254,19 @@
             </ul>   
     </div>
 
-    <div style="clear:both"></div>
-
     </div>
     
-    </footer> <!-- END footer -->		  
+</footer> 		  
 
 <!-- ######################## Scripts ######################## --> 
 
-    <!-- Included JS Files (Compressed) -->
-    <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
-    <!-- Initialize JS Plugins -->
-    <script src="javascripts/app.js" type="text/javascript"></script>
+  <script src="js/foundation.min.js" type="text/javascript"></script> 
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/foundation/foundation.equalizer.js"></script>
+
+  <script type="javascript">
+        $(document).foundation();
+  </script>
 
 </body>
 </html>

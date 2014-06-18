@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 
 <head>
 
   <meta charset="utf-8" />
   <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width">
 
   <title>AAA UIUC - Contact Us</title>
   
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
-  <script src="javascripts/modernizr.foundation.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css'/>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="css/lightbox.css" rel="stylesheet" />
 
-  <script src="lightbox/js/lightbox.min.js"></script>
-  <link href="lightbox/css/lightbox.css" rel="stylesheet" />
-
-  <link rel="stylesheet" href="ligature.css">
-  
-  <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+  <script src="js/modernizr.foundation.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
 
 </head>
 
@@ -38,34 +28,26 @@
 <nav>
 
      <div style="position:fixed" class="twelve columns header_nav">
-     <div class="row">
+         <div class="row">
+               <ul id="menu-header" class="nav-bar horizontal">
+                     <li class="active"><a href="index.html">Home</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a href="board.html">The Board</a></li>
+                     <li><a href="events.html">Events</a></li>
+                     <li><a href="fashion_show.html">Fashion Show</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                     <li><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
 
-            <ul id="menu-header" class="nav-bar horizontal">
-                 <li class="active"><a href="index.html">Home</a></li>
-                 <li class=""><a href="about.html">About</a></li>
-                 <li class=""><a href="board.html">The Board</a></li>
-                 <li class=""><a href="events.html">Events</a></li>
-                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
-                 <li class=""><a href="contact.html">Contact Us</a></li>
-                 <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
-
-                 <span style="float:right">
-                 <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/fb.png" width="50" height="50" /></a>
-                 <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/tw.png" width="50" height="50" /></a>
-                 <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/tr.png" width="50" height="50" /></a>
-                 <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/yt.png" width="50" height="50" /></a>
-                 <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/in.png" width="50" height="50" /></a>
-                 <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/zz.png" width="50" height="50" /></a>
-                 </span>
-            </ul>
-        
-        <script type="text/javascript">
-         //<![CDATA[
-         $('ul#menu-header').nav-bar();
-          //]]>
-        </script>
-        
-      </div>  
+                     <span style="float:right">
+                     <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/nav_bar_flags/fb.png"/></a>
+                     <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/nav_bar_flags/tw.png"/></a>
+                     <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/nav_bar_flags/tr.png"/></a>
+                     <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/nav_bar_flags/yt.png"/></a>
+                     <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/nav_bar_flags/in.png"/></a>
+                     <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/nav_bar_flags/zz.png"/></a>
+                     </span>
+                </ul>   
+          </div>  
       </div>
       
 </nav>
@@ -75,26 +57,28 @@
   <section class="section_light" style="padding-top:120px; padding-bottom:50px">
 
   <style type="text/css">
-    .swag{padding-left: 50px}
+    /*this line only works in this style tag, but not when written the same exact way in main.css. 
+    BUT this line needs to be present in main.css otherwise the other elements dont work... wtf... not swag... ahm pissed*/
+    .swag {padding-left: 50px;}
   </style>
 
       <div class="row">
-          <div class="six columns">
+          <div class="six columns contact-info">
               <h3>Contact Us</h3>
 
-              <div class="row" style="padding-top:25px">
+              <div class="row">
                 <div class="three columns">
-                  <img src="img/email5.png" height="100" width="100">
+                  <img src="img/contact/email5.png">
                 </div>
 
-                <div class="nine columns swag" style="padding-top:15px">
+                <div class="nine columns swag" style="margin-top:15px">
                   <h3>aaauiuc@gmail.com</h3>
                 </div>
               </div>
 
-              <div class="row" style="padding-top:25px">
+              <div class="row">
                 <div class="three columns">
-                  <img src="img/location.png" height="100" width="100">
+                  <img src="img/contact/location.png">
                 </div>
 
                 <div class="nine columns swag">
@@ -105,26 +89,16 @@
               </div>
 
               <a href="board.html">
-              <div class="row" style="padding-top:25px">
+              <div class="row">
                 <div class="three columns">
-                  <img src="img/boardmember.png" height="100" width="100">
+                  <img src="img/contact/boardmember.png">
                 </div>
 
-                <div class="nine columns swag" style="padding-top:15px">
+                <div class="nine columns swag" style="margin-top:15px">
                   <h3>Contact A Board Member</h3>
                 </div>
               </div>
-              </a>              
-
-<!--               <div class="row" style="padding-top:25px">
-                <div class="three columns">
-                  <img src="img/facebook2.png" height="100" width="100">
-                </div>
-
-                <div class="nine columns">
-                  <h3>www.facebook.com/groups/aaauiuc</h3>
-                </div>
-              </div> -->
+              </a>
      
           </div>
 
@@ -141,9 +115,9 @@
             <h3>From Our Very Own Cartographer Tim Chen</h3>
               <div>
                 <h5>First Floor</h5>
-                <a href="img/map1.jpg" data-lightbox="timchenmaps" data-title="First Floor"><img src="img/map1.jpg" width="450"></a>
+                <a href="img/contact/map1.jpg" data-lightbox="timchenmaps" data-title="First Floor"><img src="img/contact/map1.jpg" width="450"></a>
                 <h5>Second Floor</h5>
-                <a href="img/map2.jpg" data-lightbox="timchenmaps" data-title="Second Floor"><img src="img/map2.jpg" width="450"></a>
+                <a href="img/contact/map2.jpg" data-lightbox="timchenmaps" data-title="Second Floor"><img src="img/contact/map2.jpg" width="450"></a>
               </div>    
           </div>
 
@@ -156,20 +130,15 @@
 
     </section>
         
-		<!-- end section -->
-        
 <!-- ######################## Footer ######################## -->  
       
-    <footer>
+<footer>
 
     <div class="row">
 
-<!--     <div class="two column foo" >
-        <img src="img/growing_young.png" height="200" width="200" >
-    </div> -->
     <!-- First Column -->
 
-    <div class="three column foo">
+    <div class="three column">
         <h3>Contact Us</h3>
             <ul class="footer_links">
                 <li><span style="color:#2ba6cb">Email: aaauiuc@gmail.com</span></li>
@@ -180,7 +149,7 @@
     
     <!-- Second Column -->
     
-    <div class="three column foo">
+    <div class="three column">
         <h3>Join Our Email List!</h3>
 
         <form>
@@ -198,18 +167,18 @@
     
     <!-- Third Column -->
 
-    <div class="four column foo">
+    <div class="four column">
         <h3>Socialize</h3>
-             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/circle_icons/48x48/fb.png" width="50" height="50" /></a>
-             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/circle_icons/48x48/twitter.png" width="50" height="50" /></a>
-             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/circle_icons/48x48/tumblr.png" width="50" height="50" /></a>
-             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/circle_icons/48x48/youtube.png" width="50" height="50" /></a>
-             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/circle_icons/48x48/instagram.png" width="50" height="50" /></a>
+             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/footer_icons/fb.png"/></a>
+             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/footer_icons/twitter.png"/></a>
+             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/footer_icons/tumblr.png"/></a>
+             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/footer_icons/youtube.png"/></a>
+             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/footer_icons/instagram.png"/></a>
     </div>    
         
     <!-- Fourth Column -->
     
-    <div class="two column foo">
+    <div class="two column">
         <h3>Navigation</h3>
             <ul class="footer_links">
                 <li><a href="index.html">Home</a></li>
@@ -222,17 +191,20 @@
             </ul>   
     </div>
 
-    <div style="clear:both"></div>
-
     </div>
     
-    </footer> <!-- END footer -->
+</footer> 
+
+<!-- ######################## Scripts ######################## -->     
     
-    <!-- Included JS Files (Compressed) -->
-    <script src="javascripts/foundation.min.js" type="text/javascript">
-</script> <!-- Initialize JS Plugins -->
-     <script src="javascripts/app.js" type="text/javascript">
-</script>
+  <script src="js/foundation.min.js" type="text/javascript"></script> 
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/foundation/foundation.equalizer.js"></script>
+  <script src="js/lightbox.min.js"></script>
+
+  <script type="javascript">
+        $(document).foundation();
+  </script>
   
 </body>
 </html>
