@@ -7,7 +7,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width">
 
-  <title>AAA UIUC - The Board</title>
+  <title>AAA UIUC - About</title>
   
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -21,9 +21,8 @@
 
 <body>
 
-<!-- ######################## Nav Bar ######################## -->
+<!-- ######################## Main Menu ######################## -->
  
-<<<<<<< HEAD
 <nav>
 
      <div style="position:fixed" class="twelve columns header_nav">
@@ -49,147 +48,35 @@
           </div>  
       </div>
       
-</nav>
-
-<!-- ######################## Footer ######################## -->  
+</nav>      
       
-<footer>
-
-    <div class="row">
-
-    <!-- First Column -->
-
-    <div class="three column">
-        <h3>Contact Us</h3>
-            <ul class="footer_links">
-                <li><span style="color:#2ba6cb">Email: aaauiuc@gmail.com</span></li>
-                <li><span style="color:#2ba6cb">Illini Union 280<br>Office 256</span></li>
-                <li><a href="https://www.youtube.com/watch?v=Lf_eRgbhQ1M">Find Us!</a></li>
-            </ul>
-    </div>
-    
-    <!-- Second Column -->
-    
-    <div class="three column">
-        <h3>Join Our Email List!</h3>
-
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>
-                <input type="text" placeholder="Enter Email Here"/>
-              </label>
-            </div>
-            <a href="#" class="button" id="submit-button">Submit</a>
-          </div>
-        </form>
-
-    </div>
-    
-    <!-- Third Column -->
-
-    <div class="four column">
-        <h3>Socialize</h3>
-             <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/footer_icons/fb.png"/></a>
-             <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/footer_icons/twitter.png"/></a>
-             <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/footer_icons/tumblr.png"/></a>
-             <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/footer_icons/youtube.png"/></a>
-             <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/footer_icons/instagram.png"/></a>
-    </div>    
-        
-    <!-- Fourth Column -->
-    
-    <div class="two column">
-        <h3>Navigation</h3>
-            <ul class="footer_links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="board.html">The Board</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="fashion_show.html">Fashion Show</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
-            </ul>   
-    </div>
-
-    </div>
-    
-</footer>		  
-
-<!-- ######################## Scripts ######################## --> 
-
-  <script src="js/foundation.min.js" type="text/javascript"></script> 
-  <script src="js/app.js" type="text/javascript"></script>
-
-  <script type="javascript">
-        $(document).foundation();
-  </script>
-
-=======
-	<nav>
-
-	     <div style="position:fixed" class="twelve columns header_nav">
-	     <div class="row">
-
-	            <ul id="menu-header" class="nav-bar horizontal">
-	                 <li class="active"><a href="index.html">Home</a></li>
-	                 <li class=""><a href="about.html">About</a></li>
-	                 <li class=""><a href="board.html">The Board</a></li>
-	                 <li class=""><a href="events.html">Events</a></li>
-	                 <li class=""><a href="fashion_show.html">Fashion Show</a></li>
-	                 <li class=""><a href="contact.html">Contact Us</a></li>
-	                 <li class=""><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
-
-	                 <span style="float:right">
-	                 <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/fb.png" width="50" height="50" /></a>
-	                 <a href="https://twitter.com/AAA_UIUC" target="new"><img src="img/tw.png" width="50" height="50" /></a>
-	                 <a href="http://aaa-uiuc.tumblr.com/" target="new"><img src="img/tr.png" width="50" height="50" /></a>
-	                 <a href="http://www.youtube.com/user/AAAUIUCYT/" target="new"><img src="img/yt.png" width="50" height="50" /></a>
-	                 <a href="http://instagram.com/aaa_uiuc" target="new"><img src="img/in.png" width="50" height="50" /></a>
-	                 <a href="http://aaalovestonap.tumblr.com/" target="new"><img src="img/zz.png" width="50" height="50" /></a>
-	                 </span>
-	            </ul>
-	        
-	        <script type="text/javascript">
-	         //<![CDATA[
-	         $('ul#menu-header').nav-bar();
-	          //]]>
-	        </script>
-	        
-	      </div>  
-	      </div>
-	      
-	</nav>
-
-
 <!-- ######################## Header ######################## -->
         
-<header>
+<header data-0="background-position:0px 0px" data-600="background-position: 0px -150px">
 
-      <script>
-          //set header height to window size, positions logo in center of viewport
-          $(document).ready(function(){
-              resizeDiv();
-              setBackground();
-          });
+  <script type="text/javascript">
+      $(document).ready(function(){
+          resizeDiv();
+          setBackground();
+      });
 
-          window.onresize = function(event) {
-              resizeDiv();
-          }
+      window.onresize = function(event) {
+          resizeDiv();
+      }
 
-          function resizeDiv() {
-              vph = $(window).height();
-              $('header').css({'height': vph*(11/16) + $('.nav-bar').height()/2 + 'px'});
-          }
+      function resizeDiv() {
+          vph = $(window).height();
+          $('header').css({'height': vph*(11/16) + $('.nav-bar').height()/2 + 'px'});
+      }
 
-          function setBackground() {
-              $('header').css({"background":"url('img/boardpic.jpg') fixed no-repeat","background-size":"cover"});
-          }
-      </script>
+      function setBackground() {
+          $('header').css({"background":"url('img/boardpic.jpg') fixed no-repeat","background-size":"cover"});
+      }      
+  </script>
 
 </header>
 
-<!-- ######################## Section ######################## -->
+<!-- ######################## exec Section ######################## -->
 
 	<section class="section_main">
 
@@ -197,26 +84,279 @@
 	      
 	        <div class="row">
 	        
-	         <div class="four columns panel">
-	        	<h2>Co-Presidency</h2>
-	            <h3>tits</h3>
-	         </div>
-	         
-	      
-	         <div class="four columns panel">
-	            <h3>Coord 2</h3>
-	            <img src="img/varun.jpg" width="300" height="300">
-	         </div>
-	          
-	          
-	         <div class="four columns panel">
-	            <h3>Coord 3</h3>
-	            <img src="img/varun.jpg" width="300" height="300">
-	         </div>
+		         <div class="four columns panel">
+		        	<h2>Co-President</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/annie.jpg" width="350" height="350"  
+						onmouseover="this.src='img/board/alsoannie.jpg'" 
+						onmouseout="this.src='img/board/annie.jpg'">
+		            <h3 align='center'>Vice President Internal</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/tim.jpg" width="350" height="350"  
+						onmouseover="this.src='img/board/alsotim.jpg'" 
+						onmouseout="this.src='img/board/tim.jpg'">
+		            <h3 align='center'>Vice President External</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Treasurer</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/ka.jpg" width="350" height="350" align="middle">
+		            <h3 align='center'>KANG</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Secretary</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/helen.jpg" width="350" height="350" align='middle'>
+		            <h3 align='center'>meloncow</h3>
+		         </div>
 	        
 	        </div>
 	      
 	</section>
->>>>>>> origin/master
+
+<!-- ######################## plebe Section ######################## -->
+
+	<section class="section_main">
+
+	      <h1 style="text-align:center">Officer Board</h1>
+	      
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Academic/Alumni</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/stephanie.jpg" width="350" height="350">
+		            <h3 align='center'>sg</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/joe.jpg" width="350" height="350">
+		            <h3 align='center'>poolgod</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Big Sib/Lil' Sib</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/michelle.jpg" width="350" height="350">
+		            <h3 align='center'>mogemoge</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/peter.jpg" width="350" height="350">
+		            <h3 align='center'>littlelamb</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Cultural Awareness</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/charlene.jpg" width="350" height="350">
+		            <h3 align='center'>megacharmander</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/lihan.jpg" width="350" height="350">
+		            <h3 align='center'>lye-han</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Fashion Show Head Coordinators</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/hiep.jpg" width="350" height="350">
+		            <h3 align='center'>hieppityduda</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/neil.jpg" width="350" height="350"  
+						onmouseover="this.src='img/board/neil2.png'" 
+						onmouseout="this.src='img/board/neil.jpg'">>
+		            <h3 align='center'>poop</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Fundraising</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/alicej.jpg" width="350" height="350">
+		            <h3 align='center'>a-lice</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/alex.jpg" width="350" height="350">
+		            <h3 align='center'>alexwuuuhuu</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Outreach</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/irene.jpg" width="350" height="350">
+		            <h3 align='center'>ireneureneweallrene</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/anthony.jpg" width="350" height="350">
+		            <h3 align='center'>luluu</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Philanthropy</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/bianca.jpg" width="350" height="350">
+		            <h3 align='center'>binca</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/alvin.jpg" width="350" height="350">
+		            <h3 align='center'>chipmunk</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Public Relations</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/varun.jpg" width="350" height="350">
+		            <h3 align='center'>indianjesus</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/gary.jpg" width="350" height="350">
+		            <h3 align='center'>gar</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Social</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/alicey.jpg" width="350" height="350">
+		            <h3 align='center'>yinyang</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/johnny.jpg" width="350" height="350">
+		            <h3 align='center'>figtree</h3>
+		         </div>
+	        
+	        </div>
+
+	        <div class="row">
+	        
+		         <div class="four columns panel">
+		        	<h2>Sports</h2>
+		            <h3>tits</h3>
+		         </div>
+		         
+		      
+		         <div class="four columns panel">
+		            <img src="img/board/tiffany.jpg" width="350" height="350">
+		            <h3 align='center'>tsoiahoy</h3>
+		         </div>
+		          
+		          
+		         <div class="four columns panel">
+		            <img src="img/board/wilson.jpg" width="350" height="350">
+		            <h3 align='center'>megaswampert</h3>
+		         </div>
+	        
+	        </div>
+	      
+	</section>
 </body>
 </html>
