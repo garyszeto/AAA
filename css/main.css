@@ -29,7 +29,9 @@ footer h3 {color: #888d92}
 .active a {background:#F06B48; color: #FFF}
 
 /*nav bar flags*/
-#menu-header img {width: 40px; height: 40px;}
+#menu-header img {width: 40px; height: 40px; opacity: 0.4;}
+#menu-header img:hover {opacity: 1;}
+#flagset {float: right;}
 
 /* sections */
 .section_light {background: #FFF; border-top: 1px dotted #999; border-bottom: 1px dotted #999; padding: 20px 0; clear:both}
