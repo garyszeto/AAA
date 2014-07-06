@@ -18,6 +18,7 @@
 
   <script src="js/modernizr.foundation.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <script type="text/javascript" src="js/konami.js"></script> 
   <script type="text/javascript">
       var easter_egg = new Konami('ee.html');   
@@ -59,12 +60,11 @@
 <!-- ######################## Header ######################## -->
         
 <header>
-
+      
       <script>
           //set header height to window size, positions logo in center of viewport (vp)
           $(document).ready(function(){
-              setCenter();
-              doSlideshow();
+              setCenter();  
           });
 
           window.onresize = function(event) {
@@ -79,15 +79,6 @@
               $('#header-logo').css({'left': vpw/2 - $('#header-logo img').width()/2 + 'px'});
           }
 
-          //slideshow: add images in array
-          var images = new Array('img/home_slideshow/s1.jpg','img/home_slideshow/s2.jpg','img/home_slideshow/s3.jpg', 'img/home_slideshow/s4.jpg', 'img/home_slideshow/s5.jpg');
-          var nextimage=0;
-
-          function doSlideshow()
-          {
-            if(nextimage>=images.length) nextimage=0;
-            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
-          }
       </script>
 
       <div id="header-logo" style="position:fixed" data-0="opacity:1;" data-400="opacity:0;">
@@ -202,6 +193,18 @@
 
   <script type="javascript">
         $(document).foundation();
+  </script>
+
+  <script src="js/jquery.bgswitcher.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $("header").bgswitcher({
+              images: ["img/home_slideshow/s1.jpg", "img/home_slideshow/s2.jpg", "img/home_slideshow/s3.jpg", 
+                       "img/home_slideshow/s4.jpg", "img/home_slideshow/s5.jpg"],
+              shuffle: true,
+              duration: 2000
+          });
+      });
   </script>
 
   <script type="text/javascript" src="js/skrollr.js"></script>

@@ -60,7 +60,6 @@
           //set header height to window size, positions logo in center of viewport
           $(document).ready(function(){
               setCenter();
-              doSlideshow();
           });
 
           window.onresize = function(event) {
@@ -73,16 +72,6 @@
               $('header').css({'height': vph + 'px'});
               $('#header-logo').css({'top': vph/2 - $('#header-logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
               $('#header-logo').css({'left': vpw/2 - $('#header-logo img').width()/2 + 'px'});
-          }
-
-          //slideshow: add images in array
-          var images = new Array('img/fs/fs1.jpg','img/fs/cultural4.jpg','img/fs/fs5.jpg', 'img/fs/formal1.jpg', 'img/fs/fs3.jpg', 'img/fs/cultural1.jpg');
-          var nextimage=0;
-
-          function doSlideshow()
-          {
-            if(nextimage>=images.length) nextimage=0;
-            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
           }
       </script>
 
@@ -483,7 +472,17 @@
         $(document).foundation();
   </script>
 
-  <!-- Add fancyBox main JS and CSS files -->
+  <script src="js/jquery.bgswitcher.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $("header").bgswitcher({
+              images: ['img/fs/fs1.jpg','img/fs/cultural4.jpg','img/fs/fs5.jpg', 'img/fs/formal1.jpg', 'img/fs/fs3.jpg', 'img/fs/cultural1.jpg'],
+              shuffle: true,
+              duration: 2000
+          });
+      });
+  </script>
+
   <script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
   <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen" />
 
