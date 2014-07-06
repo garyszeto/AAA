@@ -87,3 +87,7 @@ footer h3 {color: #888d92}
 .swag {padding-left: 50px;}
 .contact-info .row {padding-top: 25px;}
 .contact-info img {height: 100px; width: 100px;}
+
+/*other*/
+.button {background-color: #F06B48; border: 0px; font-family: 'Open Sans Condensed',sans-serif; font-weight: 300; font-size: 25px; height: 50px;}
+.button:hover {background-color: #C0563A;}

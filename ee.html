@@ -7,7 +7,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width">
 
-  <title>AAA UIUC</title>
+  <title>AAA UIUC | Congrats!</title>
 
   <link rel="icon" type="image/x-icon" href="img/aaauiuc.ico"/>
   
@@ -18,10 +18,6 @@
 
   <script src="js/modernizr.foundation.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/konami.js"></script> 
-  <script type="text/javascript">
-      var easter_egg = new Konami('ee.html');   
-  </script>
 
 </head>
 
@@ -40,7 +36,7 @@
                      <li><a href="events.html">Events</a></li>
                      <li><a href="fashion_show.html">Fashion Show</a></li>
                      <li><a href="contact.html">Contact Us</a></li>
-                     <li><a href="http://www.uiucapac.org/affiliates.html" target="_blank">Affiliates</a></li>
+                     <li><a href="http://www.uiucapac.org/affiliates.html">Affiliates</a></li>
 
                      <span id="flagset">
                      <a href="https://www.facebook.com/groups/2200258601/" target="new"><img src="img/nav_bar_flags/fb.png"/></a>
@@ -55,80 +51,22 @@
       </div>
       
 </nav>
-      
-<!-- ######################## Header ######################## -->
-        
-<header>
-
-      <script>
-          //set header height to window size, positions logo in center of viewport (vp)
-          $(document).ready(function(){
-              setCenter();
-              doSlideshow();
-          });
-
-          window.onresize = function(event) {
-              setCenter();
-          }
-
-          function setCenter() {
-              vph = $(window).height();
-              vpw = $(window).width();
-              $('header').css({'height': vph + 'px'});
-              $('#header-logo').css({'top': vph/2 - $('#header-logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
-              $('#header-logo').css({'left': vpw/2 - $('#header-logo img').width()/2 + 'px'});
-          }
-
-          //slideshow: add images in array
-          var images = new Array('img/home_slideshow/s1.jpg','img/home_slideshow/s2.jpg','img/home_slideshow/s3.jpg', 'img/home_slideshow/s4.jpg', 'img/home_slideshow/s5.jpg');
-          var nextimage=0;
-
-          function doSlideshow()
-          {
-            if(nextimage>=images.length) nextimage=0;
-            $('header').css('background-image','url("'+images[nextimage++]+'")').fadeIn(1000, function(){setTimeout(doSlideshow,4000);});
-          }
-      </script>
-
-      <div id="header-logo" style="position:fixed" data-0="opacity:1;" data-400="opacity:0;">
-          <img src="img/aaa.png" width="1000">
-      </div>
-
-</header>
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main">
+<section>
+  <div id="congrats" class="section_main">
+      <h1>Congratulations</h1>
+      <h2>You deserve a cookie.</h2>
+      <img src="http://www.dailystormer.com/wp-content/uploads/2014/04/cookie-monster.jpg">
+  </div>
+  <style type="text/css">
+      #congrats{text-align: center; padding-top: 100px;}
+  </style> 
+  <script type="text/javascript">
 
-      <h1 style="text-align:center">Upcoming Events</h1>
-      
-      <div class="row">
-      
-          <article class="six columns" id="e1">
-                <div class="panel">
-                    <h3>T Shirt Design Contest</h3>
-                    <a href="https://www.facebook.com/events/762057360501546/" target="new"><img src="img/events/event01.jpg"/></a>
-                </div>
-          </article>
-          
-          <article class="six columns">
-                <div class="panel" id="e2">
-                    <h3>Fashion Show</h3>
-                    <a href="https://www.facebook.com/events/623943981006497/" target="new"><img src="img/events/fashion_show.jpg"/></a>
-                </div>
-          </article>
-  
-      </div>
-      
-      <script type="text/javascript">
-          //this doesn't actually adapt to different images, it's essentially hard coded.
-          //I couldn't get the automatic one to work correctly since $('#e1').height() doesn't return what you would want it to.
-          $(document).ready(function(){
-              $('#e2').css({'height': + $('#e1').height() - 22 + 'px'});
-          });
-      </script>
-
-</section>        
+  </script> 
+</section>
 
 <!-- ######################## Footer ######################## -->  
       
@@ -193,7 +131,7 @@
 
     </div>
     
-</footer>		  
+</footer>     
 
 <!-- ######################## Scripts ######################## --> 
 
@@ -202,15 +140,6 @@
 
   <script type="javascript">
         $(document).foundation();
-  </script>
-
-  <script type="text/javascript" src="js/skrollr.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-        skrollr.init({
-          smoothScrolling: false
-        });
-      });
   </script>
 
 </body>
