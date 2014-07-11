@@ -11,6 +11,7 @@
   
   <link rel="icon" type="image/x-icon" href="img/swag.ico"/>
 
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -23,9 +24,9 @@
 
 <body>
 
-<!-- ######################## Main Menu ######################## -->
+<!-- ######################## Nav Bar ######################## -->
  
-<nav>
+<nav data-topbar>
 
      <div style="position:fixed" class="twelve columns header_nav">
          <div class="row">
@@ -51,15 +52,41 @@
       </div>
       
 </nav>
+
+<!-- ######################## Nav Bar Mobile ######################## -->
+
+<nav>
+
+      <ul class="navmobile">
+        <li>
+          Fashion Show
+          <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="about.html"><li>About</li></a>
+              <a href="board.html"><li>The Board</li></a>
+              <a href="events.html"><li>Events</li></a>
+              <a href="fashion_show.html"><li>Fashion Show</li></a>
+              <a href="contact.html"><li>Contact Us</li></a>
+              <a href="http://www.uiucapac.org/affiliates.html" target="_blank"><li>Affiliates</li></a>
+          </ul>
+        </li>
+      </ul>
+
+</nav>
       
 <!-- ######################## Header ######################## -->
         
 <header>
 
       <script>
-          //set header height to window size, positions logo in center of viewport
+          //set header height to window size, positions logo in center of viewport (vp)
           $(document).ready(function(){
-              setCenter();
+              if ($(".header_nav").css("display") == "none") {
+                setCenterMobile();
+              }
+              else {
+                setCenter(); 
+              } 
           });
 
           window.onresize = function(event) {
@@ -73,25 +100,55 @@
               $('#header-logo').css({'top': vph/2 - $('#header-logo img').height()/2 + $('.nav-bar').height()/2 + 'px'});
               $('#header-logo').css({'left': vpw/2 - $('#header-logo img').width()/2 + 'px'});
           }
+
+          function setCenterMobile() {
+              vph = $(window).height();
+              vpw = $(window).width();
+              $('header').css({'height': vph/2 + 'px'});
+              $('#header-logo').css({'top': vph*(2/11) - $('#header-logo img').height()/2 + $('.navmobile').height()/2 + 'px'});
+              $('#header-logo').css({'left': vpw/2 - $('#header-logo img').width()/2 + 'px'});
+          }
+
       </script>
 
-      <div id="header-logo" style="position:fixed;" data-0="opacity:.1" data-400="opacity:0">
-          <img src="img/anon.png">
+      <div id="header-logo" data-0="opacity:1;" data-400="opacity:0;">
+          <img src="img/fs75.png" width="1000">
       </div>
+
+      <style type="text/css">
+          @media only screen and (min-width: 40em){
+            #header-logo {position:fixed}
+          }
+          @media only screen and (max-width: 40em){
+            #header-logo {position: relative;}
+          }
+      </style>
 
 </header>
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main fs">
+<section class="section_fs">
 
-      <h1>Fashion Show</h1>
+      <div class="row">
+        <div class="column twelve">
+          <h1>Fashion Show</h1>
+        </div>
+      </div>      
 
-      <h2> Maurizzle sheezy fizzle mofo turpis. Go to hizzle izzle cool. Yippiyo pizzle rhoncizzle dawg. In hac habitasse da bomb dictumst. Dizzle dapibus. Daahng dawg tellus urna, pretizzle fo shizzle my nizzle, mattizzle izzle, fo shizzle my nizzle vitae, nunc. Sizzle suscipit. Integizzle semper velit sizzle purus. </h2>
+      <div class="row">
+        <div class="column twelve">
+          <h2>The annual AAA Fashion Show strives to promote the mission statement of the organization through a year long production. It’s an opportunity for students of all backgrounds to come together and experience something unforgettable through the medium of dance. This year, our theme seeks to explore fundamental social issues that motivate discussion not only in the APA communities, but in communities globally. The show will provide a story that speaks to people from all walks of life. The show will consist of five different scenes, each uniquely designed to explore a different issue and engage those involved in an unforgettable way.</h2>
+        </div>
+      </div>
 
-      <h3>View upcoming events and meetings for Fashion Show:</h3>
+      <div class="row">
+        <div class="column twelve">
+          <h3>View upcoming events and meetings for Fashion Show:</h3>
+        </div>
+      </div>
 
-      <div class="row fs-all" style="margin-bottom:50px">
+      <div class="row fs-all">
         <div class="column five"></div>
         <div class="column two">
           <a class="fancybox fancybox.iframe" href="gcal.html"><div class="button expand">FS Calendar</div></a>
@@ -126,8 +183,12 @@
       </style>
 
       <div class="row">
+        <div class="column twelve">
+          <h3>Head Coordinators:</h3>
+        </div>
+      </div>
 
-      <h3>Head Coordinators:</h3>
+      <div class="row">
 
          <div class="two columns"></div>
       
@@ -148,8 +209,12 @@
       </div>
 
       <div class="row">
+        <div class="column twelve">
+          <h3>Fashion Show Interns:</h3>
+        </div>
+      </div>
 
-      <h3>Fashion Show Interns:</h3>
+      <div class="row">
       
          <div class="two columns"></div>
 
@@ -178,46 +243,63 @@
 </section>     
 
     <script type="text/javascript">//using script because css isn't working with setting the background image
-        $("#culturalpic").css({"background":"url('img/fs/cultural6.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+        if ($(".header_nav").css("display") != "none") {
+          $("#culturalpic").css({"background":"url('img/fs/cultural6.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+        }
+        else {
+          $("#culturalpic").css({"background":"url('img/fs/cultural6.jpg') no-repeat","background-size":"cover","height":"200px"});
+        }
     </script>   
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main fs">
+<section class="section_fs">
 
-      <h1>Cultural Scene</h1>
-
-      <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
-
-      <h3>Scene Coordinators:</h3>
-      
-        <div class="row">
-
-         <div class="three columns panel">
-            <h4>Jocelyn Liang</h4>
-            <h5>jliang29@illinois.edu</h5>
-            <img src="img/fs_coords/cropped/jocelyn.jpg">
-         </div>
-
-         <div class="three columns panel">
-            <h4>Melissa Lin</h4>
-            <h5>mlin28@illinois.edu</h5>
-            <img src="img/fs_coords/cropped/melissa.jpg">
-         </div> 
-        
-         <div class="three columns panel">
-            <h4>Jeffrey Lin</h4>
-            <h5>jlin56@illinois.edu</h5>
-            <img src="img/fs_coords/cropped/jeff.jpg">
-         </div>
-
-         <div class="three columns panel">
-            <h4>Johnny Ngo</h4>
-            <h5>jmngo2@illinois.edu</h5>
-            <img src="img/fs_coords/cropped/johnny.jpg">
-         </div>        
-        
+      <div class="row">
+        <div class="column twelve">
+          <h1>Cultural Scene</h1>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="column twelve">
+          <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column twelve">
+          <h3>Scene Coordinators:</h3>
+        </div>
+      </div>
+      
+      <div class="row">
+
+       <div class="three columns panel">
+          <h4>Helen Fan</h4>
+          <h5>hafan2@illinois.edu</h5>
+          <img src="img/fs_coords/cropped/melissa.jpg">
+       </div> 
+
+       <div class="three columns panel">
+          <h4>Jocelyn Liang</h4>
+          <h5>jliang29@illinois.edu</h5>
+          <img src="img/fs_coords/cropped/jocelyn.jpg">
+       </div>
+      
+       <div class="three columns panel">
+          <h4>Jeffrey Lin</h4>
+          <h5>jlin56@illinois.edu</h5>
+          <img src="img/fs_coords/cropped/jeff.jpg">
+       </div>
+
+       <div class="three columns panel">
+          <h4>Johnny Ngo</h4>
+          <h5>jmngo2@illinois.edu</h5>
+          <img src="img/fs_coords/cropped/johnny.jpg">
+       </div>        
+      
+      </div>
       
 </section>  
 
@@ -227,19 +309,36 @@
     <div id="nightlifepic"></div> 
 </section>     
 
-    <script type="text/javascript">
-        $("#nightlifepic").css({"background":"url('img/fs/nightlife2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+    <script type="text/javascript">//using script because css isn't working with setting the background image
+        if ($(".header_nav").css("display") != "none") {
+          $("#nightlifepic").css({"background":"url('img/fs/nightlife2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+        }
+        else {
+          $("#nightlifepic").css({"background":"url('img/fs/nightlife2.jpg') no-repeat","background-size":"cover","height":"200px"});
+        }
     </script>   
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main fs">
+<section class="section_fs">
 
-      <h1>Nightlife Scene</h1>
+      <div class="row">
+        <div class="column twelve">
+          <h1>Nightlife Scene</h1>
+        </div>
+      </div>
 
-      <h2 > I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+      <div class="row">
+        <div class="column twelve">
+          <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+        </div>
+      </div>
 
-      <h3>Scene Coordinators:</h3>
+      <div class="row">
+        <div class="column twelve">
+          <h3>Scene Coordinators:</h3>
+        </div>
+      </div>
       
         <div class="row">
         
@@ -271,19 +370,36 @@
     <div id="formalpic"></div> 
 </section>     
 
-    <script type="text/javascript">
-        $("#formalpic").css({"background":"url('img/fs/formal3.jpg') fixed no-repeat", "background-size":"cover", "height":"450px"});
-    </script>   
+    <script type="text/javascript">//using script because css isn't working with setting the background image
+        if ($(".header_nav").css("display") != "none") {
+          $("#formalpic").css({"background":"url('img/fs/formal3.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+        }
+        else {
+          $("#formalpic").css({"background":"url('img/fs/formal3.jpg') no-repeat","background-size":"cover","height":"200px"});
+        }
+    </script>    
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main fs">
+<section class="section_fs">
 
-      <h1>Formal Scene</h1>
+      <div class="row">
+        <div class="column twelve">
+          <h1>Formal Scene</h1>
+        </div>
+      </div>
 
-      <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+      <div class="row">
+        <div class="column twelve">
+          <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+        </div>
+      </div>
 
-      <h3>Scene Coordinators:</h3>
+      <div class="row">
+        <div class="column twelve">
+          <h3>Scene Coordinators:</h3>
+        </div>
+      </div>
       
         <div class="row">
         
@@ -315,19 +431,36 @@
     <div id="bizcazpic"></div> 
 </section>     
 
-    <script type="text/javascript">
-        $("#bizcazpic").css({"background":"url('img/fs/bizcaz1.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
-    </script>   
+    <script type="text/javascript">//using script because css isn't working with setting the background image
+        if ($(".header_nav").css("display") != "none") {
+          $("#bizcazpic").css({"background":"url('img/fs/bizcaz1.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+        }
+        else {
+          $("#bizcazpic").css({"background":"url('img/fs/bizcaz1.jpg') no-repeat","background-size":"cover","height":"200px"});
+        }
+    </script>    
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main fs">
+<section class="section_fs">
 
-      <h1>BizCaz Scene</h1>
+      <div class="row">
+        <div class="column twelve">
+          <h1>BizCaz Scene</h1>
+        </div>
+      </div>
 
-      <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+      <div class="row">
+        <div class="column twelve">
+          <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+        </div>
+      </div>
 
-      <h3>Scene Coordinators:</h3>
+      <div class="row">
+        <div class="column twelve">
+          <h3>Scene Coordinators:</h3>
+        </div>
+      </div>
       
         <div class="row">
         
@@ -359,19 +492,36 @@
     <div id="modernpic"></div> 
 </section>     
 
-    <script type="text/javascript">
-        $("#modernpic").css({"background":"url('img/fs/fs2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
-    </script>   
+    <script type="text/javascript">//using script because css isn't working with setting the background image
+        if ($(".header_nav").css("display") != "none") {
+          $("#modernpic").css({"background":"url('img/fs/fs2.jpg') fixed no-repeat","background-size":"cover", "height":"450px"});
+        }
+        else {
+          $("#modernpic").css({"background":"url('img/fs/fs2.jpg') no-repeat","background-size":"cover","height":"200px"});
+        }
+    </script>    
 
 <!-- ######################## Section ######################## -->
 
-<section class="section_main fs">
+<section class="section_fs">
 
-      <h1>Modern Scene</h1>
+      <div class="row">
+        <div class="column twelve">
+          <h1>Modern Scene</h1>
+        </div>
+      </div>
 
-      <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+      <div class="row">
+        <div class="column twelve">
+          <h2> I'm in the shizzle sheezy dolor crackalackin amizzle, yo bizzle elit. Nullizzle sapizzle velizzle, for sure volutpizzle, suscipit quizzle, own yo' vizzle, ma nizzle. Pellentesque eget tortor. Sizzle uhuh ... yih!. Fusce izzle shiznit check out this we gonna chung tempizzle break yo neck, yall. </h2>
+        </div>
+      </div>
 
-      <h3>Scene Coordinators:</h3>
+      <div class="row">
+        <div class="column twelve">
+          <h3>Scene Coordinators:</h3>
+        </div>
+      </div>
       
         <div class="row">
         
@@ -408,7 +558,7 @@
 
     <div class="three column">
         <h3>Contact Us</h3>
-            <ul class="footer_links">
+            <ul>
                 <li><span style="color:#2ba6cb">Email: aaauiuc@gmail.com</span></li>
                 <li><span style="color:#2ba6cb">Illini Union 280<br>Office 256</span></li>
                 <li><a href="https://www.youtube.com/watch?v=Lf_eRgbhQ1M">Find Us!</a></li>
@@ -427,7 +577,7 @@
                 <input type="text" placeholder="Enter Email Here"/>
               </label>
             </div>
-            <a href="#" class="button" id="submit-button">Submit</a>
+            <a href="#" class="button expand" id="submit-button">Submit</a>
           </div>
         </form>
 
@@ -448,7 +598,7 @@
     
     <div class="two column">
         <h3>Navigation</h3>
-            <ul class="footer_links">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="board.html">The Board</a></li>
@@ -503,7 +653,11 @@
   <script type="text/javascript" src="js/skrollr.js"></script>
   <script type="text/javascript">
       $(document).ready(function(){
-          skrollr.init();
+        if ($(".header_nav").css("display") != "none") {
+          skrollr.init({
+            smoothScrolling: false
+          });
+        }
       });
   </script>
 

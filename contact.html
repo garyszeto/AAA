@@ -11,6 +11,7 @@
 
   <link rel="icon" type="image/x-icon" href="img/cash.ico"/>
   
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -25,7 +26,7 @@
 
 <body>
 
-<!-- ######################## Main Menu ######################## -->
+<!-- ######################## Nav Bar ######################## -->
  
 <nav>
 
@@ -53,10 +54,31 @@
       </div>
       
 </nav>
+
+<!-- ######################## Nav Bar Mobile ######################## -->
+
+<nav>
+
+      <ul class="navmobile">
+        <li>
+          Contact AAA
+          <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="about.html"><li>About</li></a>
+              <a href="board.html"><li>The Board</li></a>
+              <a href="events.html"><li>Events</li></a>
+              <a href="fashion_show.html"><li>Fashion Show</li></a>
+              <a href="contact.html"><li>Contact Us</li></a>
+              <a href="http://www.uiucapac.org/affiliates.html" target="_blank"><li>Affiliates</li></a>
+          </ul>
+        </li>
+      </ul>
+
+</nav>
       
 <!-- ######################## Section ######################## -->
       
-  <section class="section_main" style="padding-top:120px; padding-bottom:50px">
+  <section class="section_contact">
 
   <style type="text/css">
     /*this line only works in this style tag, but not when written the same exact way in main.css. 
@@ -65,9 +87,11 @@
   </style>
 
       <div class="row">
+          <!-- desktop only -->
           <div class="six columns contact-info">
-              <h3>Contact Us</h3>
+              <h3 id="contactus">Contact Us</h3>
 
+              <a href="mailto:aaauiuc@gmail.com" target="new">
               <div class="row">
                 <div class="three columns">
                   <img src="img/contact/email5.png">
@@ -77,10 +101,13 @@
                   <h3>aaauiuc@gmail.com</h3>
                 </div>
               </div>
+              </a>
 
               <div class="row">
                 <div class="three columns">
                   <img src="img/contact/location.png">
+                  <div class="contact-info-mobile">
+                  </div>
                 </div>
 
                 <div class="nine columns swag">
@@ -101,17 +128,45 @@
                 </div>
               </div>
               </a>
-     
+
           </div>
+          <!-- end desktop only -->
+
+          <!-- mobile -->
+          <div>
+              <h3 id="contactus" class="contact-info-mobile">Contact Us</h3>
+
+              <a href="mailto:aaauiuc@gmail.com" target="new">
+              <div class="contact-info-mobile cims">
+                <img src="img/contact/email5.png">
+                <h3>aaauiuc@gmail.com</h3>
+              </div>
+              </a>
+
+              <div class="contact-info-mobile cims">
+                <img src="img/contact/location.png">
+                <h3 id="rso">Illini Union 280 <br>
+                    (RSO Complex) <br>
+                    #256</h3>
+              </div>
+
+              <a href="board.html">
+              <div class="contact-info-mobile cims">
+                <img src="img/contact/boardmember.png">
+                <h3>Contact A Board Member</h3>
+              </div>
+              </a>
+          </div>
+          <!-- end mobile -->
 
           <div class="six columns">
             <h3>Where is the AAA office you ask?</h3>
-              <iframe style="padding-top:30px" width="450" height="325" src="https://www.youtube.com/embed/Lf_eRgbhQ1M" frameborder="0" allowfullscreen></iframe>
+              <iframe id="contactyt" src="https://www.youtube.com/embed/Lf_eRgbhQ1M" frameborder="0" allowfullscreen></iframe>
           </div>
 
       </div>
 
-      <div class="row" style="margin-top:50px">
+      <div class="row" id="cmaps">
 
           <div class="six columns">
             <h3>From Our Very Own Cartographer Tim Chen</h3>
@@ -125,7 +180,7 @@
 
           <div class="six columns">
             <h3>Where To Find Us</h3>
-              <iframe style="padding-top:20px" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3051.458300136285!2d-88.227261!3d40.10978899999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880cd0eb0df454b5%3A0xe7ba4e7c081a6483!2sIllini+Union!5e0!3m2!1sen!2sus!4v1402008493056" width="450" height="450" frameborder="0" style="border:0"></iframe>
+              <iframe id="contactmap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3051.458300136285!2d-88.227261!3d40.10978899999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880cd0eb0df454b5%3A0xe7ba4e7c081a6483!2sIllini+Union!5e0!3m2!1sen!2sus!4v1402008493056" frameborder="0" style="border:0"></iframe>
           </div>
 
       </div>
@@ -142,7 +197,7 @@
 
     <div class="three column">
         <h3>Contact Us</h3>
-            <ul class="footer_links">
+            <ul>
                 <li><span style="color:#2ba6cb">Email: aaauiuc@gmail.com</span></li>
                 <li><span style="color:#2ba6cb">Illini Union 280<br>Office 256</span></li>
                 <li><a href="https://www.youtube.com/watch?v=Lf_eRgbhQ1M">Find Us!</a></li>
@@ -161,7 +216,7 @@
                 <input type="text" placeholder="Enter Email Here"/>
               </label>
             </div>
-            <a href="#" class="button" id="submit-button">Submit</a>
+            <a href="#" class="button expand" id="submit-button">Submit</a>
           </div>
         </form>
 
@@ -182,7 +237,7 @@
     
     <div class="two column">
         <h3>Navigation</h3>
-            <ul class="footer_links">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="board.html">The Board</a></li>
@@ -200,7 +255,6 @@
 <!-- ######################## Scripts ######################## -->     
     
   <script src="js/foundation.min.js" type="text/javascript"></script> 
-  <script src="js/app.js" type="text/javascript"></script>
   <script src="lightbox/js/lightbox.min.js"></script>
 
   <script type="javascript">
