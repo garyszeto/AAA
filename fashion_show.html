@@ -90,7 +90,9 @@
           });
 
           window.onresize = function(event) {
-              setCenter();
+              if ($(".header_nav").css("display") != "none") {
+                setCenter();
+              }
           }
 
           function setCenter() {
@@ -104,8 +106,8 @@
           function setCenterMobile() {
               vph = $(window).height();
               vpw = $(window).width();
-              $('header').css({'height': vph/2 + 'px'});
-              $('#header-logo').css({'top': vph*(2/11) - $('#header-logo img').height()/2 + $('.navmobile').height()/2 + 'px'});
+              $('header').css({'height':'200px'});
+              $('#header-logo').css({'top':'35px'});
               $('#header-logo').css({'left': vpw/2 - $('#header-logo img').width()/2 + 'px'});
           }
 

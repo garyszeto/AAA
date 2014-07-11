@@ -87,7 +87,9 @@
       });
 
       window.onresize = function(event) {
-          resizeDiv();
+          	if ($(".header_nav").css("display") != "none") {
+                resizeDiv();
+			}
       }
 
       function resizeDiv() {
