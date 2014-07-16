@@ -248,5 +248,5 @@ footer li {list-style-type: none;}
 	#congrats h1 {font-size: 4em;}
 
 	#submit-button {width: auto;}
-	header {background: no-repeat left top; background-size: 380px; padding: 20px 0 40px;}
+	header {background: no-repeat left top; background-size: cover; padding: 20px 0 40px;}
 }
