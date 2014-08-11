@@ -113,7 +113,8 @@ footer li {list-style-type: none;}
 	visibility: visible;
 }
 
-/*submit button in footer*/
+/*email list signup in footer*/
+#mce-EMAIL {width: 165px;}
 #submit-button {width:165px; height: 34px; margin-right:5px; margin-left:5px; font-size: 20px; padding: 5px}
 
 /*index page*/

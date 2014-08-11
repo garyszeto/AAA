@@ -18,7 +18,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css'/>
 
   <script src="js/modernizr.foundation.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+  <script src="js/jquery.min.js"></script> 
 
 </head>
 
@@ -464,14 +464,17 @@
     <div class="three column">
         <h3>Join Our Email List!</h3>
 
-        <form>
+        <form action="//aaauiuc.us6.list-manage.com/subscribe/post?u=d867fc5c62ce793a3af012a4a&amp;id=e32367e809" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div class="row">
             <div class="large-12 columns">
               <label>
-                <input type="text" placeholder="Enter Email Here"/>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" required placeholder="Enter Email Here"/>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_d867fc5c62ce793a3af012a4a_e32367e809" tabindex="-1" value=""></div>
               </label>
             </div>
-            <a href="#" class="button expand" id="submit-button">Submit</a>
+            <input type="submit" value="Subscribe" name="subscribe" id="submit-button" class="button">
+            <!-- <a class="button expand" id="submit-button">Submit</a> -->
           </div>
         </form>
 
