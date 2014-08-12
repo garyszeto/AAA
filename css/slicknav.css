@@ -39,24 +39,24 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;  
-    background-color: #222222;
+    background-color: #F06B48;
 }
 /* Button Text */
 .slicknav_menu  .slicknav_menutxt {
-    color: #FFF;
+    color: #F06B48;
     font-weight: bold;
     text-shadow: 0 1px 3px #000;
 }
 /* Button Lines */
 .slicknav_menu .slicknav_icon-bar {
-  background-color: #f5f5f5;
+  background-color: #fafafa;
 }
 .slicknav_menu {
-    background:#4c4c4c;
+    background:#fafafa;
     padding:5px;
 }
 .slicknav_nav {
-    color:#fff;
+    color:#F06B48;
     margin:0;
     padding:0;
     font-size:0.875em;
@@ -77,7 +77,7 @@
     padding:5px 10px;
     margin:2px 5px;
     text-decoration:none;
-    color:#fff;
+    color:#F06B48;
 }
 .slicknav_nav .slicknav_item a,
 .slicknav_nav .slicknav_parent-link a {
@@ -96,7 +96,7 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
     background:#ccc;
-    color:#222;
+    color:#F68B68;
 }
 .slicknav_nav .slicknav_txtnode {
      margin-left:15px;   
