@@ -19,6 +19,10 @@
 
   <script src="js/modernizr.foundation.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="js/fastclick.js"></script>
+
+  <link rel="stylesheet" href="css/slicknav.css"/>
+  <script src="js/jquery.slicknav.min.js"></script>
 
 </head>
 
@@ -57,19 +61,14 @@
 
 <nav>
 
-      <ul class="navmobile">
-        <li>
-          Fashion Show
-          <ul>
-              <a href="index.html"><li>Home</li></a>
-              <a href="about.html"><li>About</li></a>
-              <a href="board.html"><li>The Board</li></a>
-              <a href="events.html"><li>Events</li></a>
-              <a href="fs.html"><li>Fashion Show</li></a>
-              <a href="contact.html"><li>Contact Us</li></a>
-              <a href="http://www.uiucapac.org/affiliates.html" target="_blank"><li>Affiliates</li></a>
-          </ul>
-        </li>
+      <ul id="menu">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="board.html">The Board</a></li>
+         <li><a href="events.html">Events</a></li>
+         <li><a href="fs.html">Fashion Show</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="http://www.uiucapac.org/affiliates.html" target="_blank">Affiliates</a></li>
       </ul>
 
 </nav>
@@ -79,6 +78,11 @@
 <header>
 
       <script>
+          //mobile nav bar
+          $('#menu').slicknav({
+            label: '',
+            duration: 500
+          });
           //set header height to window size, positions logo in center of viewport (vp)
           $(document).ready(function(){
               if ($(".header_nav").css("display") == "none") {

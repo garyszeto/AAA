@@ -22,7 +22,7 @@ footer li {list-style-type: none;}
 	.section_light_about {display: none;}
 }
 @media only screen and (min-width: 52em){
-	.navmobile {display: none;}
+	#menu {display: none;}
 	.contact-info-mobile {display: none;}
 	.section_about_mobile {display: none;}
 }
@@ -56,61 +56,17 @@ footer li {list-style-type: none;}
 #flagset {float: right;}
 
 /*mobile nav bar*/
-.navmobile {
-	font-family: 'Open Sans Condensed', Helvetica, sans-serif;
-	text-align: left;
-	display: inline;
-	margin: 0;
-	padding: 15px 4px 17px 0;
-	list-style: none;
+.slicknav_menu {
+	display:none;
+}
 
-}
-.navmobile li {
-	font-size: 20px;
-	display: inline-block;
-	margin-right: -4px;
-	position: relative;
-	padding: 15px 20px;
-	background: #fafafa;
-	cursor: pointer;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
-}
-.navmobile li:hover {
-	background: #F06B48;
-	color: #fff;
-}
-.navmobile li ul {
-	padding: 0;
-	position: absolute;
-	top: 62px;
-	left: -20px;
-	width: 150px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transiton: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-ms-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-	-transition: opacity 0.2s;
-}
-.navmobile li ul li { 
-	background: #fafafa; 
-	display: block; 
-	color: #000;
-}
-.navmobile li ul li:hover { background: #F06B48;}
-.navmobile li:hover ul {
-	display: block;
-	opacity: 1;
-	visibility: visible;
+@media screen and (max-width: 40em) {
+	.js #menu {
+		display:none;
+	}	
+	.js .slicknav_menu {
+		display:block;
+	}
 }
 
 /*email list signup in footer*/
