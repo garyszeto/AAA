@@ -23,6 +23,7 @@ footer li {list-style-type: none;}
 }
 @media only screen and (min-width: 52em){
 	#menu {display: none;}
+	#title {display: none;}
 	.contact-info-mobile {display: none;}
 	.section_about_mobile {display: none;}
 }
@@ -56,11 +57,12 @@ footer li {list-style-type: none;}
 #flagset {float: right;}
 
 /*mobile nav bar*/
+#title {top:-6px; left:15px; position:absolute;}
 .slicknav_menu {
 	display:none;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 52em) {
 	.js #menu {
 		display:none;
 	}	
