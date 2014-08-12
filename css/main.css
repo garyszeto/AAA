@@ -102,7 +102,7 @@ footer li {list-style-type: none;}
 #exec_pres .panel {height: 533px;}
 
 /*events page*/
-.section_events {padding: 20px 0 0; background-image: url('../img/patterns/escheresque_ste/escheresque_ste.png');}
+.section_events {padding: 75px 0 0; background-image: url('../img/patterns/escheresque_ste/escheresque_ste.png');}
 .section_events .row {padding-bottom:50px}
 .section_events .panel {background-color: #F06B48; border:0px; height: 360px;}
 .section_events h1 {color:#ffffff; padding: 25px; font-size: 6em;}
@@ -134,7 +134,7 @@ footer li {list-style-type: none;}
 .swag {padding-left: 50px;}
 .contact-info .row {padding-top: 25px;}
 .contact-info img {height: 100px; width: 100px;}
-.section_contact {padding: 50px 0; background-image: url('../img/patterns/agsquare/agsquare_@2X.png');}
+.section_contact {padding: 110px 0; background-image: url('../img/patterns/agsquare/agsquare_@2X.png');}
 #contactyt {width:450px; height: 325px; padding-top:30px;}
 #contactmap {width: 450px; height: 450px; padding-top:20px;}
 #cmaps {margin-top:50px;}
