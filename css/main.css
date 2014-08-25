@@ -76,7 +76,7 @@ footer li {list-style-type: none;}
 /*index page*/
 .section_home {background-image: url('../img/patterns/agsquare/agsquare_@2X.png');}
 .section_home h1 {font-size:6em; text-align: center; padding: 20px 0 10px;}
-.section_home .panel {height: 325px;}
+.section_home .panel {height: 275px;}
 .section_home > div {padding: 25px}
 
 /*about page*/
@@ -102,15 +102,15 @@ footer li {list-style-type: none;}
 /*events page*/
 .section_events {padding: 75px 0 0; background-image: url('../img/patterns/escheresque_ste/escheresque_ste.png');}
 .section_events .row {padding-bottom:50px}
-.section_events .panel {background-color: #F06B48; border:0px; height: 360px;}
+.section_events .panel {background-color: #F06B48; border:0px; height: 300px;}
 .section_events h1 {color:#ffffff; padding: 25px; font-size: 6em;}
 .section_events h3 {color:#ffffff; padding: 5px;}
 .shadow {
  -moz-box-shadow:    inset 0 0 10px #000000;
  -webkit-box-shadow: inset 0 0 10px #000000;
- box-shadow:         inset 0 0 20px #000000;
+ box-shadow:         inset 0 0 10px #000000;
 }
-.shadow2{box-shadow: 0 0 30px #262626;}
+.shadow2{box-shadow: 0 0px 0px #262626;}
 .section_annual_events {background-image: url('../img/patterns/agsquare/agsquare_@2X.png'); padding: 20px 0; clear:both}
 .section_annual_events h1 {text-align: center; padding-bottom: 30px; margin: 0 0 20px 0}
 #annual-events {padding: 20px 0;}
@@ -145,7 +145,7 @@ footer li {list-style-type: none;}
 }
 
 /*easter egg page*/
-.section_ee {padding: 30px; background-image: url('../img/patterns/agsquare/agsquare_@2X.png');}
+.section_ee {padding: 100px 0 30px; background-image: url('../img/patterns/agsquare/agsquare_@2X.png');}
 .section_ee h1 {font-size:6em; text-align: center;}
 .section_ee {text-align: center;}
 
