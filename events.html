@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/main.css">
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
   <script src="js/modernizr.foundation.js"></script>
   <script src="js/jquery.min.js"></script>  
@@ -104,21 +105,48 @@
 
           <article class="six columns" id="e1">
                 <div class="panel shadow">
-                    <h3>10/26 - Homecoming Brunch with AAA Alumni</h3>
-                    <div class="shadow2"><a href="https://www.facebook.com/events/783012815092143/" target="_blank"><img src="img/events/homecoming-brunch.png"/></a></div>
+                    <h3>10/29 - Fashion Show T-Shirt Design Contest</h3>
+                    <div class="shadow2"><a href="http://facebook.com/events/1489336891315585/" target="_blank"><img src="img/events/fs-shirt-design-contest.png"/></a></div>
                 </div>
           </article>
 
           <article class="six columns" id="e1">
                 <div class="panel shadow">
-                    <h3>10/26 - Fashion Show T-Shirt Design Contest</h3>
-                    <div class="shadow2"><a href="http://facebook.com/events/1489336891315585/" target="_blank"><img src="img/events/fs-shirt-design-contest.png"/></a></div>
+                    <h3>10/30 - Night Before Halloween for Relay for Life</h3>
+                    <div class="shadow2"><a href="http://facebook.com/events/781377055257206/" target="_blank"><img src="img/events/Halloween.png"/></a></div>
                 </div>
           </article>
           
       </div>
 
-      <div class="row">  
+      <div class="row" style="padding-bottom: 0px">  
+
+          <article class="six columns" id="e1">
+                <div class="panel shadow">
+                    <h3>11/02 - Capture the Flag Tournament</h3>
+                    <div class="shadow2"><a href="https://www.facebook.com/events/909106205768739/" target="_blank"><img src="img/events/CTF.png"/></a></div>
+                </div>
+          </article>
+
+          <article class="six columns" id="e1">
+                <div class="panel shadow">
+                    <h3>11/07 - AAA+VSA Semiformal: Wish Upon a Star</h3>
+                    <div class="shadow2"><a href="http://facebook.com/events/349016401923358/" target="_blank"><img src="img/events/semiformal.png"/></a></div>
+                </div>
+          </article>
+          
+      </div>
+
+      <!-- ######################## Past Events ######################## -->
+            
+      <div id="past">
+        <h1 style="text-align:center; padding:0; margin:0">Past Events</h1>
+        <h1 style="text-align:center; font-size:2em; padding:0 0 auto 0; margin:0">(Click to Expand)</h1>
+      </div>
+
+      <div class="pastevents">
+
+      <div class="row">
 
           <article class="six columns" id="e1">
                 <div class="panel shadow">
@@ -126,12 +154,15 @@
                     <div class="shadow2"><a href="http://facebook.com/events/341019899404163/" target="_blank"><img src="img/events/mia-zas.png"/></a></div>
                 </div>
           </article>
-          
-      </div>
 
-      <!-- ######################## Past Events ######################## -->
-      
-      <h1 style="text-align:center">Past Events</h1>
+          <article class="six columns" id="e1">
+                <div class="panel shadow">
+                    <h3>10/26 - Homecoming Brunch with AAA Alumni</h3>
+                    <div class="shadow2"><a href="https://www.facebook.com/events/783012815092143/" target="_blank"><img src="img/events/homecoming-brunch.png"/></a></div>
+                </div>
+          </article>  
+
+      </div>
 
       <div class="row">
 
@@ -295,6 +326,9 @@
           </article>
           
       </div>
+
+      </div>
+
 </section> 
 
 <!-- ######################## Section ######################## -->
@@ -480,9 +514,27 @@
 
   <script src="js/foundation.min.js" type="text/javascript"></script> 
   <script src="js/app.js" type="text/javascript"></script>
+  
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
   <script type="javascript">
         $(document).foundation();
+  </script>
+
+  <script type="text/javascript">
+      $('.pastevents').hide();
+      var disp = false;
+      $('#past').click(function(){
+        if(!disp){
+          $('.pastevents').show("blind", 2000);
+          disp = !disp;
+        }
+        else{
+          $('.pastevents').hide("blind", 500);
+          disp = !disp;
+        }
+        
+      });
   </script>
 
 </body>
