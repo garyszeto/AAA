@@ -123,7 +123,7 @@
             
       <div id="past">
         <h1 style="text-align:center; padding:0; margin:0">Past Events</h1>
-        <h1 style="text-align:center; font-size:2em; padding:0 0 auto 0; margin:0">(Click to Expand)</h1>
+        <h1 id="expandcollapse" style="text-align:center; font-size:2em; padding:0 0 auto 0; margin:0"></h1>
       </div>
 
       <div class="pastevents">
@@ -552,15 +552,20 @@
 
   <script type="text/javascript">
       $('.pastevents').hide();
+      $('#expandcollapse').append('(Click to Expand)');
       var disp = false;
       $('#past').click(function(){
         if(!disp){
           $('.pastevents').show("blind", 2000);
           disp = !disp;
+          $('#expandcollapse').empty();
+          $('#expandcollapse').append('(Click to Collapse)');
         }
         else{
           $('.pastevents').hide("blind", 500);
           disp = !disp;
+          $('#expandcollapse').empty();
+          $('#expandcollapse').append('(Click to Expand)');
         }
         
       });
