@@ -25,6 +25,9 @@ footer li {list-style-type: none;}
 	.section_about_mobile {display: none;}
 	.cmb {display: none;}
 }
+@media only screen and (min-width: 40em){
+	.fsm {display: none;}
+}
 .header_nav {background: #fafafa; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999;}
 
 .nav-bar {margin-top: 0; background: none;}
@@ -213,6 +216,7 @@ footer li {list-style-type: none;}
 	#annual-events h1 {font-size: 4em; padding: 0 0 10px;}
 	#annual-events h3 {font-size: 2.5em}
 
+	.fsd {display: none;}
 	.section_fs {padding: 10px;}
 	.section_fs .panel {height: auto;}
 	.section_fs h1 {font-size: 4em; padding: 0;}
